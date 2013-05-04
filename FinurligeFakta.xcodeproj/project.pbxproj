@@ -17,12 +17,21 @@
 		240B165917355F8A002EDD48 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 240B165817355F8A002EDD48 /* Default@2x.png */; };
 		240B165B17355F8A002EDD48 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 240B165A17355F8A002EDD48 /* Default-568h@2x.png */; };
 		240B165E17355F8A002EDD48 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 240B165C17355F8A002EDD48 /* MainStoryboard.storyboard */; };
-		240B166117355F8A002EDD48 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 240B166017355F8A002EDD48 /* ViewController.m */; };
 		240B166917355F8A002EDD48 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240B166817355F8A002EDD48 /* SenTestingKit.framework */; };
 		240B166A17355F8A002EDD48 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240B164417355F89002EDD48 /* UIKit.framework */; };
 		240B166B17355F8A002EDD48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240B164617355F8A002EDD48 /* Foundation.framework */; };
 		240B167317355F8A002EDD48 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 240B167117355F8A002EDD48 /* InfoPlist.strings */; };
 		240B167617355F8A002EDD48 /* FinurligeFaktaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 240B167517355F8A002EDD48 /* FinurligeFaktaTests.m */; };
+		240B1681173560D6002EDD48 /* FaktaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 240B1680173560D6002EDD48 /* FaktaViewController.m */; };
+		240B16841735612F002EDD48 /* OmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 240B16831735612F002EDD48 /* OmViewController.m */; };
+		240B1686173561A1002EDD48 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 240B1685173561A1002EDD48 /* background.png */; };
+		240B16881735621A002EDD48 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 240B16871735621A002EDD48 /* logo.png */; };
+		240B168B173562D3002EDD48 /* icon_reload.png in Resources */ = {isa = PBXBuildFile; fileRef = 240B1689173562D3002EDD48 /* icon_reload.png */; };
+		240B168C173562D3002EDD48 /* quotes.png in Resources */ = {isa = PBXBuildFile; fileRef = 240B168A173562D3002EDD48 /* quotes.png */; };
+		240B168E1735644B002EDD48 /* ikon_om.png in Resources */ = {isa = PBXBuildFile; fileRef = 240B168D1735644B002EDD48 /* ikon_om.png */; };
+		240B169217356750002EDD48 /* FaktaQueryService.m in Sources */ = {isa = PBXBuildFile; fileRef = 240B169117356750002EDD48 /* FaktaQueryService.m */; };
+		240B169517356A7E002EDD48 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 240B169417356A7E002EDD48 /* Constants.m */; };
+		AF9B9BFDBAD44EB094D45263 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6E2E57569DC43B9B77D2AAF /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,14 +59,27 @@
 		240B165817355F8A002EDD48 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		240B165A17355F8A002EDD48 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		240B165D17355F8A002EDD48 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		240B165F17355F8A002EDD48 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		240B166017355F8A002EDD48 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		240B166717355F8A002EDD48 /* FinurligeFaktaTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinurligeFaktaTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		240B166817355F8A002EDD48 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		240B167017355F8A002EDD48 /* FinurligeFaktaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FinurligeFaktaTests-Info.plist"; sourceTree = "<group>"; };
 		240B167217355F8A002EDD48 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		240B167417355F8A002EDD48 /* FinurligeFaktaTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinurligeFaktaTests.h; sourceTree = "<group>"; };
 		240B167517355F8A002EDD48 /* FinurligeFaktaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FinurligeFaktaTests.m; sourceTree = "<group>"; };
+		240B167F173560D6002EDD48 /* FaktaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaktaViewController.h; sourceTree = "<group>"; };
+		240B1680173560D6002EDD48 /* FaktaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaktaViewController.m; sourceTree = "<group>"; };
+		240B16821735612F002EDD48 /* OmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OmViewController.h; sourceTree = "<group>"; };
+		240B16831735612F002EDD48 /* OmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OmViewController.m; sourceTree = "<group>"; };
+		240B1685173561A1002EDD48 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		240B16871735621A002EDD48 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		240B1689173562D3002EDD48 /* icon_reload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_reload.png; sourceTree = "<group>"; };
+		240B168A173562D3002EDD48 /* quotes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quotes.png; sourceTree = "<group>"; };
+		240B168D1735644B002EDD48 /* ikon_om.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ikon_om.png; sourceTree = "<group>"; };
+		240B169017356750002EDD48 /* FaktaQueryService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaktaQueryService.h; sourceTree = "<group>"; };
+		240B169117356750002EDD48 /* FaktaQueryService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaktaQueryService.m; sourceTree = "<group>"; };
+		240B169317356A7E002EDD48 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		240B169417356A7E002EDD48 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		943F5E0C0C9241F6B3EA3E9C /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		D6E2E57569DC43B9B77D2AAF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +90,7 @@
 				240B164517355F8A002EDD48 /* UIKit.framework in Frameworks */,
 				240B164717355F8A002EDD48 /* Foundation.framework in Frameworks */,
 				240B164917355F8A002EDD48 /* CoreGraphics.framework in Frameworks */,
+				AF9B9BFDBAD44EB094D45263 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +114,7 @@
 				240B166E17355F8A002EDD48 /* FinurligeFaktaTests */,
 				240B164317355F89002EDD48 /* Frameworks */,
 				240B164217355F89002EDD48 /* Products */,
+				943F5E0C0C9241F6B3EA3E9C /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +134,7 @@
 				240B164617355F8A002EDD48 /* Foundation.framework */,
 				240B164817355F8A002EDD48 /* CoreGraphics.framework */,
 				240B166817355F8A002EDD48 /* SenTestingKit.framework */,
+				D6E2E57569DC43B9B77D2AAF /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -117,12 +142,19 @@
 		240B164A17355F8A002EDD48 /* FinurligeFakta */ = {
 			isa = PBXGroup;
 			children = (
+				240B168F173564C4002EDD48 /* images */,
 				240B165317355F8A002EDD48 /* AppDelegate.h */,
 				240B165417355F8A002EDD48 /* AppDelegate.m */,
 				240B165C17355F8A002EDD48 /* MainStoryboard.storyboard */,
-				240B165F17355F8A002EDD48 /* ViewController.h */,
-				240B166017355F8A002EDD48 /* ViewController.m */,
 				240B164B17355F8A002EDD48 /* Supporting Files */,
+				240B167F173560D6002EDD48 /* FaktaViewController.h */,
+				240B1680173560D6002EDD48 /* FaktaViewController.m */,
+				240B16821735612F002EDD48 /* OmViewController.h */,
+				240B16831735612F002EDD48 /* OmViewController.m */,
+				240B169017356750002EDD48 /* FaktaQueryService.h */,
+				240B169117356750002EDD48 /* FaktaQueryService.m */,
+				240B169317356A7E002EDD48 /* Constants.h */,
+				240B169417356A7E002EDD48 /* Constants.m */,
 			);
 			path = FinurligeFakta;
 			sourceTree = "<group>";
@@ -160,6 +192,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		240B168F173564C4002EDD48 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				240B168D1735644B002EDD48 /* ikon_om.png */,
+				240B1689173562D3002EDD48 /* icon_reload.png */,
+				240B168A173562D3002EDD48 /* quotes.png */,
+				240B16871735621A002EDD48 /* logo.png */,
+				240B1685173561A1002EDD48 /* background.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,6 +214,7 @@
 				240B163D17355F89002EDD48 /* Sources */,
 				240B163E17355F89002EDD48 /* Frameworks */,
 				240B163F17355F89002EDD48 /* Resources */,
+				DBAED4656FB1416E98AB055F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -236,6 +281,11 @@
 				240B165917355F8A002EDD48 /* Default@2x.png in Resources */,
 				240B165B17355F8A002EDD48 /* Default-568h@2x.png in Resources */,
 				240B165E17355F8A002EDD48 /* MainStoryboard.storyboard in Resources */,
+				240B1686173561A1002EDD48 /* background.png in Resources */,
+				240B16881735621A002EDD48 /* logo.png in Resources */,
+				240B168B173562D3002EDD48 /* icon_reload.png in Resources */,
+				240B168C173562D3002EDD48 /* quotes.png in Resources */,
+				240B168E1735644B002EDD48 /* ikon_om.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +313,20 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		DBAED4656FB1416E98AB055F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -272,7 +336,10 @@
 			files = (
 				240B165117355F8A002EDD48 /* main.m in Sources */,
 				240B165517355F8A002EDD48 /* AppDelegate.m in Sources */,
-				240B166117355F8A002EDD48 /* ViewController.m in Sources */,
+				240B1681173560D6002EDD48 /* FaktaViewController.m in Sources */,
+				240B16841735612F002EDD48 /* OmViewController.m in Sources */,
+				240B169217356750002EDD48 /* FaktaQueryService.m in Sources */,
+				240B169517356A7E002EDD48 /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +447,7 @@
 		};
 		240B167A17355F8A002EDD48 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 943F5E0C0C9241F6B3EA3E9C /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FinurligeFakta/FinurligeFakta-Prefix.pch";
@@ -391,6 +459,7 @@
 		};
 		240B167B17355F8A002EDD48 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 943F5E0C0C9241F6B3EA3E9C /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FinurligeFakta/FinurligeFakta-Prefix.pch";
@@ -453,6 +522,7 @@
 				240B167B17355F8A002EDD48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		240B167C17355F8A002EDD48 /* Build configuration list for PBXNativeTarget "FinurligeFaktaTests" */ = {
 			isa = XCConfigurationList;
@@ -461,6 +531,7 @@
 				240B167E17355F8A002EDD48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
