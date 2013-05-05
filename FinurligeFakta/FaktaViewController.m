@@ -7,6 +7,7 @@
 //
 
 #import "FaktaViewController.h"
+#import "FaktaQueryService.h"
 
 @interface FaktaViewController ()
 
@@ -28,6 +29,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]]];
+    FaktaQueryService *service = [[FaktaQueryService alloc] init];
+    [service queryFakta];
 }
 
 - (void)didReceiveMemoryWarning
