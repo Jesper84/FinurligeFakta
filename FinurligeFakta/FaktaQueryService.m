@@ -9,50 +9,36 @@
 #import "FaktaQueryService.h"
 #import "Constants.h"
 #import "Fakta.h"
-#import <RestKit.h>
 @implementation FaktaQueryService
 
-- (void)queryFakta{
-    __block Fakta *fakta = nil;
-    NSString *guidURL = [NSString stringWithFormat:@"http://service.finurligefakta.dk/?method=getGuid&api-key=%@", API_KEY];
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:guidURL]];
+- (void)queryGuid{
+
+    NSString *url = [NSString stringWithFormat:@"http://service.finurligefakta.dk/?method=getGuid&api-key=%@", API_KEY];
     
-    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[Fakta class]];
-    [mapping addAttributeMappingsFromDictionary:@{
-     @"guid":   @"guid",
-     @"title": @"title",
-     @"author": @"author",
-     @"content": @"content"
-     }];
-    
-    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:mapping pathPattern:nil keyPath:nil statusCodes:nil];
-    RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[responseDescriptor]];
-    
-    [operation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *result){
-        fakta = (Fakta *)[result firstObject];
-        NSLog(@"Fakta: %@", fakta);
-        
-        NSString *faktaURL = [NSString stringWithFormat:@"http://service.finurligefakta.dk/?method=getFact&api-key=%@&guid=%@", API_KEY, fakta.guid];
-        NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:faktaURL]];
-        
-        RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:mapping pathPattern:nil keyPath:nil statusCodes:nil];
-        operation = [[RKObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[responseDescriptor]];
-        
-        [operation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *result){
-            fakta = (Fakta *)[result firstObject];
-            NSLog(@"Fakta: %@", fakta);
+    NSURLRequest *guidRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    [NSURLConnection sendAsynchronousRequest:guidRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error){
+        if(error.localizedDescription == nil){
+            NSError *error = nil;
+            NSDictionary *test = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+            NSLog(@"GUID: %@", [test valueForKey:@"guid"]);
+            [self queryFaktaFor:[test valueForKey:@"guid"]];
             
-        } failure:nil];
-        
-        
-        
-        [operation start];
-        
-    } failure:nil];
+            
+        }
+    }];
     
-    [operation start];
-    
-    
+}
+
+- (void)queryFaktaFor:(NSString *)guid{
+    NSString *url = [NSString stringWithFormat:@"http://service.finurligefakta.dk/?method=getFact&guid=%@&api-key=%@", guid, API_KEY];
+    NSURLRequest *factRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    [NSURLConnection sendAsynchronousRequest:factRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error){
+        if (error.localizedDescription == nil) {
+            NSError *jsonError = nil;
+            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&jsonError];
+            NSLog(@"Fact: %@", json);
+        }
+    }];
 }
 
 @end

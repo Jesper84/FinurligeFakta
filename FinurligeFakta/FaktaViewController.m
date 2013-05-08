@@ -30,7 +30,11 @@
 	// Do any additional setup after loading the view.
     [[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]]];
     FaktaQueryService *service = [[FaktaQueryService alloc] init];
-    [service queryFakta];
+    [service queryGuid];
+}
+
+- (void)getFactData{
+    
 }
 
 - (void)didReceiveMemoryWarning

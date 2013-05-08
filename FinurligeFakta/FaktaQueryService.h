@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface FaktaQueryService : NSObject
-
-- (void)queryFakta;
+@interface FaktaQueryService : NSObject<NSURLConnectionDelegate>
+- (void)queryGuid;
+- (void)queryFaktaFor:(NSString *) guid;
 
 @end
