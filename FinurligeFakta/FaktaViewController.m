@@ -8,13 +8,14 @@
 
 #import "FaktaViewController.h"
 #import "FaktaQueryService.h"
+#import "MBProgressHUD.h"
 
 @interface FaktaViewController ()
 
 @end
 
 @implementation FaktaViewController
-@synthesize faktaText, titleLabel, shareButton;
+@synthesize faktaText, titleLabel, shareButton, queryService;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -33,15 +34,35 @@
     UIImage *buttonImageHighligt = [[UIImage imageNamed:@"orangeButtonHighlight"] resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
     [shareButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
     [shareButton setBackgroundImage:buttonImageHighligt forState:UIControlStateHighlighted];
-    
-    FaktaQueryService *service = [[FaktaQueryService alloc] init];
-    [service setDelegate:self];
-    [service queryGuid];
+    queryService = [[FaktaQueryService alloc] init];
+    [queryService setDelegate:self];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        [queryService queryGuid];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        });
+    });
 }
 
 - (IBAction)showShareMenu:(id)sender{
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Blaf" message:@"Blaf" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-    [alert show];
+    NSString *shareInfo = [NSString stringWithFormat:@"Finurlig Fakta: \n%@", faktaText.text];
+    __block UIActivityViewController *activityView = [[UIActivityViewController alloc] initWithActivityItems:@[shareInfo] applicationActivities:nil];
+    activityView.excludedActivityTypes = @[UIActivityTypePostToTwitter];
+    [self presentViewController:activityView animated:YES completion:^{
+        activityView.excludedActivityTypes = nil;
+        activityView = nil;
+    }];
+}
+
+- (IBAction)fetchNewFact:(id)sender{
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        [queryService queryGuid];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        });
+    });
 }
 
 - (void)factRequestComplete:(NSDictionary *)factData{
