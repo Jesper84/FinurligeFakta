@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FaktaQueryService.h"
 
-@interface FaktaViewController : UIViewController
+@interface FaktaViewController : UIViewController <FaktaQueryDelegate>
 
 @property (nonatomic, strong) IBOutlet UITextView *faktaText;
+@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
+@property (strong, nonatomic) IBOutlet UIButton *shareButton;
 
 @end

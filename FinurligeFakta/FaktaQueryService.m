@@ -10,7 +10,7 @@
 #import "Constants.h"
 #import "Fakta.h"
 @implementation FaktaQueryService
-
+@synthesize delegate;
 - (void)queryGuid{
 
     NSString *url = [NSString stringWithFormat:@"http://service.finurligefakta.dk/?method=getGuid&api-key=%@", API_KEY];
@@ -37,6 +37,7 @@
             NSError *jsonError = nil;
             NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&jsonError];
             NSLog(@"Fact: %@", json);
+            [delegate factRequestComplete:json];
         }
     }];
 }

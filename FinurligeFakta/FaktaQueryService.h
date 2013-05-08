@@ -7,8 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+@class FaktaQueryService;
+@protocol FaktaQueryDelegate <NSObject>
 
-@interface FaktaQueryService : NSObject<NSURLConnectionDelegate>
+- (void)factRequestComplete:(NSDictionary *)factData;
+
+@end
+@interface FaktaQueryService : NSObject<NSURLConnectionDelegate>{
+    __weak id <FaktaQueryDelegate> delegate;
+}
+
+@property (nonatomic, weak) id <FaktaQueryDelegate> delegate;
+
 - (void)queryGuid;
 - (void)queryFaktaFor:(NSString *) guid;
 

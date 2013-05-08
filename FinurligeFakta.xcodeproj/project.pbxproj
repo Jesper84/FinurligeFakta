@@ -31,6 +31,10 @@
 		240B168E1735644B002EDD48 /* ikon_om.png in Resources */ = {isa = PBXBuildFile; fileRef = 240B168D1735644B002EDD48 /* ikon_om.png */; };
 		240B169217356750002EDD48 /* FaktaQueryService.m in Sources */ = {isa = PBXBuildFile; fileRef = 240B169117356750002EDD48 /* FaktaQueryService.m */; };
 		240B169517356A7E002EDD48 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 240B169417356A7E002EDD48 /* Constants.m */; };
+		24B29BE8173AF0C5001D7BD1 /* orangeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 24B29BE4173AF0C5001D7BD1 /* orangeButton.png */; };
+		24B29BE9173AF0C5001D7BD1 /* orangeButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24B29BE5173AF0C5001D7BD1 /* orangeButton@2x.png */; };
+		24B29BEA173AF0C5001D7BD1 /* orangeButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 24B29BE6173AF0C5001D7BD1 /* orangeButtonHighlight.png */; };
+		24B29BEB173AF0C5001D7BD1 /* orangeButtonHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24B29BE7173AF0C5001D7BD1 /* orangeButtonHighlight@2x.png */; };
 		24E313A917369CF000F8E003 /* Fakta.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E313A817369CF000F8E003 /* Fakta.m */; };
 		AF9B9BFDBAD44EB094D45263 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6E2E57569DC43B9B77D2AAF /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -79,6 +83,10 @@
 		240B169117356750002EDD48 /* FaktaQueryService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaktaQueryService.m; sourceTree = "<group>"; };
 		240B169317356A7E002EDD48 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		240B169417356A7E002EDD48 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		24B29BE4173AF0C5001D7BD1 /* orangeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orangeButton.png; sourceTree = "<group>"; };
+		24B29BE5173AF0C5001D7BD1 /* orangeButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orangeButton@2x.png"; sourceTree = "<group>"; };
+		24B29BE6173AF0C5001D7BD1 /* orangeButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orangeButtonHighlight.png; sourceTree = "<group>"; };
+		24B29BE7173AF0C5001D7BD1 /* orangeButtonHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orangeButtonHighlight@2x.png"; sourceTree = "<group>"; };
 		24E313A717369CF000F8E003 /* Fakta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fakta.h; sourceTree = "<group>"; };
 		24E313A817369CF000F8E003 /* Fakta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fakta.m; sourceTree = "<group>"; };
 		943F5E0C0C9241F6B3EA3E9C /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
@@ -200,6 +208,10 @@
 		240B168F173564C4002EDD48 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				24B29BE4173AF0C5001D7BD1 /* orangeButton.png */,
+				24B29BE5173AF0C5001D7BD1 /* orangeButton@2x.png */,
+				24B29BE6173AF0C5001D7BD1 /* orangeButtonHighlight.png */,
+				24B29BE7173AF0C5001D7BD1 /* orangeButtonHighlight@2x.png */,
 				240B168D1735644B002EDD48 /* ikon_om.png */,
 				240B1689173562D3002EDD48 /* icon_reload.png */,
 				240B168A173562D3002EDD48 /* quotes.png */,
@@ -291,6 +303,10 @@
 				240B168B173562D3002EDD48 /* icon_reload.png in Resources */,
 				240B168C173562D3002EDD48 /* quotes.png in Resources */,
 				240B168E1735644B002EDD48 /* ikon_om.png in Resources */,
+				24B29BE8173AF0C5001D7BD1 /* orangeButton.png in Resources */,
+				24B29BE9173AF0C5001D7BD1 /* orangeButton@2x.png in Resources */,
+				24B29BEA173AF0C5001D7BD1 /* orangeButtonHighlight.png in Resources */,
+				24B29BEB173AF0C5001D7BD1 /* orangeButtonHighlight@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
