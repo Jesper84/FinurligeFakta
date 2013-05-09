@@ -14,5 +14,9 @@
 @property (nonatomic, strong) IBOutlet UITextView *faktaText;
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UIButton *shareButton;
+@property (strong, nonatomic) IBOutlet UIButton *seeMoreButton;
 @property (strong, nonatomic) FaktaQueryService *queryService;
+@property (strong, nonatomic) IBOutlet UILabel *sentByLabel;
+@property (strong, nonatomic) NSString *currentFactURL;
+@property (strong, nonatomic) NSString *currentMoreTitle;
 @end

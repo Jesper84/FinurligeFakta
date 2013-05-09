@@ -35,7 +35,7 @@
     [NSURLConnection sendAsynchronousRequest:factRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error){
         if (error.localizedDescription == nil) {
             NSError *jsonError = nil;
-            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&jsonError];
+            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&jsonError];
             NSLog(@"Fact: %@", json);
             [delegate factRequestComplete:json];
         }

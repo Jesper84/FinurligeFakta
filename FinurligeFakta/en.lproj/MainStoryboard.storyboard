@@ -4,20 +4,48 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Søg-->
-        <scene sceneID="o9t-bB-KND">
+        <!--Web View Controller-->
+        <scene sceneID="8Ek-dY-nTF">
             <objects>
-                <viewController id="3D7-GZ-fLu" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="DWH-tI-4YR">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                <viewController id="awf-gY-MCL" customClass="WebViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EeG-jw-2au">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VhL-3g-VSI">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="aV4-CV-Caj">
+                                <items>
+                                    <navigationItem title="Title" id="0Kj-OM-uan">
+                                        <barButtonItem key="rightBarButtonItem" title="OK" style="done" id="6qG-oQ-5oc">
+                                            <connections>
+                                                <action selector="okPressed:" destination="awf-gY-MCL" id="S2U-yQ-rw1"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VhL-3g-VSI" firstAttribute="leading" secondItem="EeG-jw-2au" secondAttribute="leading" type="default" id="0Wf-eL-xk2"/>
+                            <constraint firstItem="VhL-3g-VSI" firstAttribute="top" secondItem="aV4-CV-Caj" secondAttribute="bottom" type="default" id="4YO-b0-x7S"/>
+                            <constraint firstItem="aV4-CV-Caj" firstAttribute="top" secondItem="EeG-jw-2au" secondAttribute="top" type="default" id="4gd-pa-Qnx"/>
+                            <constraint firstItem="VhL-3g-VSI" firstAttribute="bottom" secondItem="EeG-jw-2au" secondAttribute="bottom" type="default" id="Ent-OD-Pb4"/>
+                            <constraint firstItem="aV4-CV-Caj" firstAttribute="leading" secondItem="EeG-jw-2au" secondAttribute="leading" type="default" id="LdY-oq-ZQA"/>
+                            <constraint firstItem="aV4-CV-Caj" firstAttribute="trailing" secondItem="EeG-jw-2au" secondAttribute="trailing" type="default" id="lOc-LW-wGQ"/>
+                            <constraint firstItem="VhL-3g-VSI" firstAttribute="trailing" secondItem="EeG-jw-2au" secondAttribute="trailing" type="default" id="qth-m6-kl2"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Søg" id="gNC-64-Fkx"/>
+                    <connections>
+                        <outlet property="navBar" destination="aV4-CV-Caj" id="MiL-dz-eJU"/>
+                        <outlet property="webView" destination="VhL-3g-VSI" id="2ae-hO-yHL"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Lbf-vY-8Nx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OLO-vE-2f5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="604" y="1172"/>
+            <point key="canvasLocation" x="1011" y="-142"/>
         </scene>
         <!--Om View Controller - Om-->
         <scene sceneID="pjk-wa-axi">
@@ -28,7 +56,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Om" image="ikon_om.png" id="gHy-sX-Xpe"/>
+                    <tabBarItem key="tabBarItem" title="Om" image="42-info.png" id="gHy-sX-Xpe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u9b-wQ-laN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -48,17 +76,25 @@
                                     <constraint firstAttribute="height" constant="49" id="sRG-8G-q5O"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="quotes.png" translatesAutoresizingMaskIntoConstraints="NO" id="kjc-AN-yoV"/>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9h-Oq-cVD">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="quote.png" translatesAutoresizingMaskIntoConstraints="NO" id="kjc-AN-yoV">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="4fF-sa-cCX"/>
+                                    <constraint firstAttribute="height" constant="42" id="Of9-Xz-OTP"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Content text" translatesAutoresizingMaskIntoConstraints="NO" id="A9h-Oq-cVD">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="218" id="314-Fp-wUe"/>
                                     <constraint firstAttribute="width" constant="240" id="upT-Ks-9Bd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJq-Ng-Gjw">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="228" translatesAutoresizingMaskIntoConstraints="NO" id="mJq-Ng-Gjw">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="59u-cD-0yB"/>
+                                    <constraint firstAttribute="width" constant="228" id="fHQ-Uu-Siq"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -94,28 +130,69 @@
                                     <action selector="fetchNewFact:" destination="Gm0-5t-OPn" eventType="touchUpInside" id="eXf-Ag-1Ab"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Indsendt af:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqd-nC-9oa">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="3UE-Qu-fvf"/>
+                                    <constraint firstAttribute="width" constant="102" id="mpU-IN-U7G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uH-0n-yJn">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="183" id="BDq-QL-Upb"/>
+                                    <constraint firstAttribute="height" constant="21" id="L6y-PJ-fxI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKM-2o-qYK">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="AFh-IA-iln"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Se mere">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="awf-gY-MCL" kind="modal" identifier="showWebview" id="QoX-EU-mdW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="A9h-Oq-cVD" firstAttribute="top" secondItem="mJq-Ng-Gjw" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="5Mk-er-YO1"/>
+                            <constraint firstAttribute="bottom" secondItem="SKM-2o-qYK" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="6FW-BW-raj"/>
                             <constraint firstItem="A9h-Oq-cVD" firstAttribute="centerX" secondItem="mJq-Ng-Gjw" secondAttribute="centerX" type="default" id="9P0-uW-9Ig"/>
-                            <constraint firstItem="kjc-AN-yoV" firstAttribute="top" secondItem="mJq-Ng-Gjw" secondAttribute="top" type="default" id="Jkq-26-G2X"/>
                             <constraint firstAttribute="trailing" secondItem="mJq-Ng-Gjw" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="LTr-uA-CVj"/>
                             <constraint firstAttribute="trailing" secondItem="EPc-Iw-U6d" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Mz0-Ip-RFR"/>
                             <constraint firstAttribute="bottom" secondItem="eU9-g1-mxY" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="Osw-en-2Tf"/>
                             <constraint firstItem="dmk-ll-pJa" firstAttribute="leading" secondItem="DDs-e6-HLm" secondAttribute="leading" type="default" id="Qba-Bs-y6e"/>
-                            <constraint firstItem="eU9-g1-mxY" firstAttribute="centerX" secondItem="DDs-e6-HLm" secondAttribute="centerX" type="default" id="cKK-Yv-dAT"/>
-                            <constraint firstItem="A9h-Oq-cVD" firstAttribute="top" secondItem="kjc-AN-yoV" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="kuj-jV-0I3"/>
+                            <constraint firstAttribute="bottom" secondItem="wqd-nC-9oa" secondAttribute="bottom" constant="102" id="Rgr-GI-mgp"/>
+                            <constraint firstAttribute="trailing" secondItem="eU9-g1-mxY" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Rla-jw-ioE"/>
+                            <constraint firstItem="mJq-Ng-Gjw" firstAttribute="centerY" secondItem="kjc-AN-yoV" secondAttribute="centerY" type="default" id="TDd-lj-uxO"/>
+                            <constraint firstItem="EPc-Iw-U6d" firstAttribute="top" secondItem="DDs-e6-HLm" secondAttribute="top" constant="20" symbolic="YES" type="default" id="UtE-ZE-Xpd"/>
+                            <constraint firstItem="wqd-nC-9oa" firstAttribute="leading" secondItem="DDs-e6-HLm" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="bPV-Tk-DCf"/>
+                            <constraint firstAttribute="bottom" secondItem="0uH-0n-yJn" secondAttribute="bottom" constant="101" id="c24-js-Adz"/>
+                            <constraint firstAttribute="trailing" secondItem="0uH-0n-yJn" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ks1-BT-bXX"/>
                             <constraint firstItem="dmk-ll-pJa" firstAttribute="top" secondItem="DDs-e6-HLm" secondAttribute="top" type="default" id="n1Q-By-BgL"/>
                             <constraint firstItem="kjc-AN-yoV" firstAttribute="leading" secondItem="DDs-e6-HLm" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="n1Z-bN-ig7"/>
-                            <constraint firstItem="kjc-AN-yoV" firstAttribute="top" secondItem="DDs-e6-HLm" secondAttribute="top" constant="91" id="n42-de-nNE"/>
-                            <constraint firstItem="A9h-Oq-cVD" firstAttribute="leading" secondItem="DDs-e6-HLm" secondAttribute="leading" constant="66" id="pAf-78-9v8"/>
-                            <constraint firstItem="EPc-Iw-U6d" firstAttribute="top" secondItem="DDs-e6-HLm" secondAttribute="top" type="default" id="vzc-AX-plP"/>
+                            <constraint firstItem="A9h-Oq-cVD" firstAttribute="centerY" secondItem="DDs-e6-HLm" secondAttribute="centerY" type="default" id="nbE-NA-8kW"/>
+                            <constraint firstItem="mJq-Ng-Gjw" firstAttribute="top" secondItem="dmk-ll-pJa" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="oad-NS-PPg"/>
+                            <constraint firstItem="SKM-2o-qYK" firstAttribute="leading" secondItem="DDs-e6-HLm" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="sdy-zn-GN3"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Fakta" id="AaP-ee-sHl"/>
+                    <tabBarItem key="tabBarItem" title="Fakta" image="152-rolodex.png" id="AaP-ee-sHl"/>
                     <connections>
                         <outlet property="faktaText" destination="A9h-Oq-cVD" id="HbP-zm-6lE"/>
+                        <outlet property="seeMoreButton" destination="SKM-2o-qYK" id="Hhk-Jy-M61"/>
+                        <outlet property="sentByLabel" destination="0uH-0n-yJn" id="hdK-os-YsW"/>
                         <outlet property="shareButton" destination="eU9-g1-mxY" id="Etz-Qw-tXL"/>
                         <outlet property="titleLabel" destination="mJq-Ng-Gjw" id="Fjc-73-hBJ"/>
                     </connections>
@@ -136,7 +213,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="Gm0-5t-OPn" kind="relationship" relationship="viewControllers" id="iP4-ZJ-Eeq"/>
-                        <segue destination="3D7-GZ-fLu" kind="relationship" relationship="viewControllers" id="bfq-8W-BpT"/>
                         <segue destination="HUg-hN-DER" kind="relationship" relationship="viewControllers" id="80t-5r-LVM"/>
                     </connections>
                 </tabBarController>
@@ -147,9 +223,10 @@
     </scenes>
     <resources>
         <image name="01-refresh.png" width="24" height="26"/>
-        <image name="ikon_om.png" width="240" height="240"/>
+        <image name="152-rolodex.png" width="26" height="18"/>
+        <image name="42-info.png" width="28" height="28"/>
         <image name="logo.png" width="250" height="96"/>
-        <image name="quotes.png" width="45" height="42"/>
+        <image name="quote.png" width="128" height="96"/>
     </resources>
     <classes>
         <class className="FaktaViewController" superclassName="UIViewController">
@@ -158,6 +235,8 @@
                 <relationship kind="action" name="fetchNewFact:"/>
                 <relationship kind="action" name="showShareMenu:"/>
                 <relationship kind="outlet" name="faktaText" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="seeMoreButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="sentByLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="shareButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
             </relationships>
@@ -167,6 +246,14 @@
         </class>
         <class className="OmViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/OmViewController.h"/>
+        </class>
+        <class className="WebViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WebViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="okPressed:"/>
+                <relationship kind="outlet" name="navBar" candidateClass="UINavigationBar"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
