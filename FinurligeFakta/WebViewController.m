@@ -29,6 +29,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.navBar.topItem.title = webViewTitle;
+    self.webView.suppressesIncrementalRendering = YES;
+    self.webView.delegate = self;
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:self.url]];
     [self.webView loadRequest:request];
 }
@@ -38,11 +40,16 @@
 }
 
 -(void)webViewDidStartLoad:(UIWebView *)webView{
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    NSLog(@"startload");
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.labelText = @"Henter side...";
 }
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView{
-    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+    NSLog(@"finishload");
+    if (!self.webView.loading) {
+        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+    }
 }
 
 - (void)didReceiveMemoryWarning

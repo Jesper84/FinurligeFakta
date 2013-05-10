@@ -1,10 +1,21 @@
 PODS:
   - MBProgressHUD (0.6)
+  - MWFeedParser (0.0.1):
+    - MWFeedParser/Feed
+    - MWFeedParser/NSDate+InternetDateTime
+    - MWFeedParser/NSString+HTML
+    - MWFeedParser/NSString+XMLEntities
+  - MWFeedParser/Feed (0.0.1)
+  - MWFeedParser/NSDate+InternetDateTime (0.0.1)
+  - MWFeedParser/NSString+HTML (0.0.1)
+  - MWFeedParser/NSString+XMLEntities (0.0.1)
 
 DEPENDENCIES:
   - MBProgressHUD (~> 0.6)
+  - MWFeedParser (~> 0.0.1)
 
 SPEC CHECKSUMS:
   MBProgressHUD: 9b55a90566fb5d07df0602f6fd9fa04510ad5d52
+  MWFeedParser: 2ca0852fac352f8333d5f46fdd4b583b921e0c4e
 
-COCOAPODS: 0.18.1
+COCOAPODS: 0.19.1

@@ -10,6 +10,7 @@
 #import "FaktaQueryService.h"
 #import "MBProgressHUD.h"
 #import "WebViewController.h"
+#import "NSString+HTML.h"
 
 @interface FaktaViewController ()
 
@@ -78,14 +79,21 @@ sentByLabel, seeMoreButton, currentFactURL, currentMoreTitle;
 }
 
 - (void)factRequestComplete:(NSDictionary *)factData{
-    NSLog(@"Valid: %d", [NSJSONSerialization isValidJSONObject:factData]);
-    faktaText.text = [factData valueForKey:@"content"];
+    faktaText.text = [[factData valueForKey:@"content"] stringByConvertingHTMLToPlainText];
     titleLabel.text = [factData valueForKey:@"title"];
-    sentByLabel.text = [factData valueForKey:@"author"];
+    
+    NSString *author = [factData valueForKey:@"author"];
+    if ([author rangeOfString:@","].location == NSNotFound) {
+        sentByLabel.text = author;
+    } else {
+        NSArray *authorSplit = [[factData valueForKey:@"author"] componentsSeparatedByString:@","];
+        sentByLabel.text = [NSString stringWithFormat:@"%@ %@", [authorSplit objectAtIndex:1], [authorSplit objectAtIndex:0]];
+    }
     NSArray *sourcesArray = [factData valueForKey:@"sources"];
     NSDictionary *sourcesDict = [sourcesArray objectAtIndex:0];
     self.currentFactURL = [sourcesDict valueForKey:@"url"];
     self.currentMoreTitle = [sourcesDict valueForKey:@"title"];
+    [faktaText setContentOffset:CGPointMake(0, 0) animated:NO];
     [faktaText flashScrollIndicators];
 }
 

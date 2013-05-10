@@ -28,6 +28,7 @@
 		240B16881735621A002EDD48 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 240B16871735621A002EDD48 /* logo.png */; };
 		240B169217356750002EDD48 /* FaktaQueryService.m in Sources */ = {isa = PBXBuildFile; fileRef = 240B169117356750002EDD48 /* FaktaQueryService.m */; };
 		240B169517356A7E002EDD48 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 240B169417356A7E002EDD48 /* Constants.m */; };
+		24545112173D36CD00B797F1 /* FavoritterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24545111173D36CD00B797F1 /* FavoritterViewController.m */; };
 		246155C4173BF3AB00ECB2E8 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246155C3173BF3AB00ECB2E8 /* WebViewController.m */; };
 		246155C7173C0E1E00ECB2E8 /* 152-rolodex.png in Resources */ = {isa = PBXBuildFile; fileRef = 246155C5173C0E1E00ECB2E8 /* 152-rolodex.png */; };
 		246155C8173C0E1E00ECB2E8 /* 152-rolodex@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 246155C6173C0E1E00ECB2E8 /* 152-rolodex@2x.png */; };
@@ -85,6 +86,8 @@
 		240B169117356750002EDD48 /* FaktaQueryService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaktaQueryService.m; sourceTree = "<group>"; };
 		240B169317356A7E002EDD48 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		240B169417356A7E002EDD48 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		24545110173D36CD00B797F1 /* FavoritterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritterViewController.h; sourceTree = "<group>"; };
+		24545111173D36CD00B797F1 /* FavoritterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritterViewController.m; sourceTree = "<group>"; };
 		246155C2173BF3AB00ECB2E8 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		246155C3173BF3AB00ECB2E8 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		246155C5173C0E1E00ECB2E8 /* 152-rolodex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "152-rolodex.png"; sourceTree = "<group>"; };
@@ -181,6 +184,8 @@
 				24E313A817369CF000F8E003 /* Fakta.m */,
 				246155C2173BF3AB00ECB2E8 /* WebViewController.h */,
 				246155C3173BF3AB00ECB2E8 /* WebViewController.m */,
+				24545110173D36CD00B797F1 /* FavoritterViewController.h */,
+				24545111173D36CD00B797F1 /* FavoritterViewController.m */,
 			);
 			path = FinurligeFakta;
 			sourceTree = "<group>";
@@ -384,6 +389,7 @@
 				240B169517356A7E002EDD48 /* Constants.m in Sources */,
 				24E313A917369CF000F8E003 /* Fakta.m in Sources */,
 				246155C4173BF3AB00ECB2E8 /* WebViewController.m in Sources */,
+				24545112173D36CD00B797F1 /* FavoritterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
