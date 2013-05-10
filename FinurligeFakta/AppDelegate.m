@@ -7,34 +7,40 @@
 //
 
 #import "AppDelegate.h"
+#import "Fakta.h"
 
 @implementation AppDelegate
 @synthesize favoriteList;
 
-- (void)saveFavoriteList:(NSArray *)favorites{
-    [favorites writeToFile:[self favoritesFilePath] atomically:YES];
+- (void)addFactToFavorites:(Fakta *)fact{
+    [favoriteList addObject:fact];
+    [self saveFavoriteList];
 }
 
-- (NSString *)favoritesFilePath{
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    return [documentsDirectory stringByAppendingPathComponent:kFavoriteList];
+- (void)saveFavoriteList{
+    [favoriteList writeToFile:[self favoriteFilePath] atomically:YES];
 }
 
-- (NSArray *)loadFavoriteList{
-    NSString *favoriteFilePath = [self favoritesFilePath];
-    if([[NSFileManager defaultManager] fileExistsAtPath:favoriteFilePath]){
+- (void)loadFavoriteList{
+    NSString *favoriteFilePath = [self favoriteFilePath];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:favoriteFilePath]) {
         favoriteList = [[NSMutableArray alloc] initWithContentsOfFile:favoriteFilePath];
-    }else {
+    } else {
         favoriteList = [[NSMutableArray alloc] init];
     }
-    return favoriteList;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [self loadFavoriteList];
     return YES;
+}
+
+- (NSString *)favoriteFilePath{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    return [documentsDirectory stringByAppendingPathComponent:kFavoriteList];
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

@@ -29,13 +29,13 @@
 	if (nil == cell) {
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
 	}
-    Fakta *fakta = [favorites objectAtIndex:indexPath.row];
+    Fakta *fakta = [self.favorites objectAtIndex:indexPath.row];
     cell.textLabel.text = fakta.title;
     return cell;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [favorites count];
+    return [self.favorites count];
 }
 
 - (void)viewDidLoad
@@ -43,7 +43,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     AppDelegate *delegate = (AppDelegate*) [[UIApplication sharedApplication] delegate];
-    favorites = [NSMutableArray arrayWithArray:[delegate loadFavoriteList]];
+    self.favorites = delegate.favoriteList;
 }
 
 - (void)didReceiveMemoryWarning

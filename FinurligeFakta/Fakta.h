@@ -12,7 +12,7 @@
 @property (nonatomic, copy) NSString *guid;
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *author;
-@property (nonatomic, copy) NSString *time;
 @property (nonatomic, copy) NSString *content;
 @property (nonatomic, copy) NSString *url;
+@property (nonatomic, copy) NSString *sourceTitle;
 @end

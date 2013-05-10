@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "FaktaQueryService.h"
-
+#import "Fakta.h"
 @interface FaktaViewController : UIViewController <FaktaQueryDelegate>
 
 @property (nonatomic, strong) IBOutlet UITextView *faktaText;
@@ -17,6 +17,8 @@
 @property (strong, nonatomic) IBOutlet UIButton *seeMoreButton;
 @property (strong, nonatomic) FaktaQueryService *queryService;
 @property (strong, nonatomic) IBOutlet UILabel *sentByLabel;
-@property (strong, nonatomic) NSString *currentFactURL;
-@property (strong, nonatomic) NSString *currentMoreTitle;
+@property (strong, nonatomic) Fakta *currentFakta;
+
+- (void)addCurrentFactAsFavorite;
+
 @end

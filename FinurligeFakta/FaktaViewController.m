@@ -10,7 +10,9 @@
 #import "FaktaQueryService.h"
 #import "MBProgressHUD.h"
 #import "WebViewController.h"
+#import "FavoriteActivity.h"
 #import "NSString+HTML.h"
+#import "AppDelegate.h"
 
 @interface FaktaViewController ()
 
@@ -18,7 +20,7 @@
 
 @implementation FaktaViewController
 @synthesize faktaText, titleLabel, shareButton, queryService,
-sentByLabel, seeMoreButton, currentFactURL, currentMoreTitle;
+sentByLabel, seeMoreButton;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -39,6 +41,9 @@ sentByLabel, seeMoreButton, currentFactURL, currentMoreTitle;
     [shareButton setBackgroundImage:buttonImageHighligt forState:UIControlStateHighlighted];
     [seeMoreButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
     [seeMoreButton setBackgroundImage:buttonImageHighligt forState:UIControlStateHighlighted];
+    
+    [self updateFavoriteBadge];
+    
     queryService = [[FaktaQueryService alloc] init];
     [queryService setDelegate:self];
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
@@ -52,7 +57,10 @@ sentByLabel, seeMoreButton, currentFactURL, currentMoreTitle;
 
 - (IBAction)showShareMenu:(id)sender{
     NSString *shareInfo = [NSString stringWithFormat:@"Finurlig Fakta: \n%@", faktaText.text];
-    __block UIActivityViewController *activityView = [[UIActivityViewController alloc] initWithActivityItems:@[shareInfo] applicationActivities:nil];
+    
+    FavoriteActivity *customActivity = [[FavoriteActivity alloc] initWithViewController:self];
+    
+    __block UIActivityViewController *activityView = [[UIActivityViewController alloc] initWithActivityItems:@[shareInfo, self.currentFakta] applicationActivities:@[customActivity]];
     activityView.excludedActivityTypes = @[UIActivityTypePostToTwitter];
     [self presentViewController:activityView animated:YES completion:^{
         activityView.excludedActivityTypes = nil;
@@ -60,11 +68,32 @@ sentByLabel, seeMoreButton, currentFactURL, currentMoreTitle;
     }];
 }
 
+- (void)addCurrentFactAsFavorite{
+    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    [delegate addFactToFavorites:self.currentFakta];
+    [self updateFavoriteBadge];
+}
+
+- (void)updateFavoriteBadge{
+    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    int number = [delegate.favoriteList count];
+    UIViewController *controller = [self.tabBarController.viewControllers objectAtIndex:1];
+    
+    if (number == 0) {
+        controller.tabBarItem.badgeValue = nil;
+    } else {
+        controller.tabBarItem.badgeValue = [NSString stringWithFormat:@"%d", number];
+    }
+    
+    
+}
+
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:@"showWebview"]) {
         WebViewController *webviewController = segue.destinationViewController;
-        webviewController.url = currentFactURL;
-        webviewController.webViewTitle = currentMoreTitle;
+        webviewController.url = self.currentFakta.url;
+        webviewController.webViewTitle = self.currentFakta.sourceTitle;
     }
 }
 
@@ -78,21 +107,34 @@ sentByLabel, seeMoreButton, currentFactURL, currentMoreTitle;
     });
 }
 
-- (void)factRequestComplete:(NSDictionary *)factData{
-    faktaText.text = [[factData valueForKey:@"content"] stringByConvertingHTMLToPlainText];
-    titleLabel.text = [factData valueForKey:@"title"];
-    
+- (void) createNewFact:(NSDictionary *)factData{
+    Fakta *fakta = [[Fakta alloc] init];
+    fakta.content = [[factData valueForKey:@"content"] stringByConvertingHTMLToPlainText];
+    fakta.title = [factData valueForKey:@"title"];
     NSString *author = [factData valueForKey:@"author"];
     if ([author rangeOfString:@","].location == NSNotFound) {
-        sentByLabel.text = author;
+        fakta.author = author;
     } else {
         NSArray *authorSplit = [[factData valueForKey:@"author"] componentsSeparatedByString:@","];
-        sentByLabel.text = [NSString stringWithFormat:@"%@ %@", [authorSplit objectAtIndex:1], [authorSplit objectAtIndex:0]];
+        fakta.author = [NSString stringWithFormat:@"%@ %@", [authorSplit objectAtIndex:1], [authorSplit objectAtIndex:0]];
     }
     NSArray *sourcesArray = [factData valueForKey:@"sources"];
     NSDictionary *sourcesDict = [sourcesArray objectAtIndex:0];
-    self.currentFactURL = [sourcesDict valueForKey:@"url"];
-    self.currentMoreTitle = [sourcesDict valueForKey:@"title"];
+    fakta.url = [sourcesDict valueForKey:@"url"];
+    fakta.sourceTitle = [sourcesDict valueForKey:@"title"];
+    
+    self.currentFakta = fakta;
+
+}
+
+- (void)factRequestComplete:(NSDictionary *)factData{
+    
+    [self createNewFact:factData];
+    
+    faktaText.text = self.currentFakta.content;
+    titleLabel.text = self.currentFakta.title;
+    sentByLabel.text = self.currentFakta.author;
+    
     [faktaText setContentOffset:CGPointMake(0, 0) animated:NO];
     [faktaText flashScrollIndicators];
 }

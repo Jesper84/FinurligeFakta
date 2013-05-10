@@ -28,6 +28,9 @@
 		240B16881735621A002EDD48 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 240B16871735621A002EDD48 /* logo.png */; };
 		240B169217356750002EDD48 /* FaktaQueryService.m in Sources */ = {isa = PBXBuildFile; fileRef = 240B169117356750002EDD48 /* FaktaQueryService.m */; };
 		240B169517356A7E002EDD48 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 240B169417356A7E002EDD48 /* Constants.m */; };
+		240ECC49173D840C00B6A610 /* FavoriteActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 240ECC48173D840C00B6A610 /* FavoriteActivity.m */; };
+		240ECC4C173D85EB00B6A610 /* star-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 240ECC4A173D85EB00B6A610 /* star-white.png */; };
+		240ECC4D173D85EB00B6A610 /* star-white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 240ECC4B173D85EB00B6A610 /* star-white@2x.png */; };
 		24545112173D36CD00B797F1 /* FavoritterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24545111173D36CD00B797F1 /* FavoritterViewController.m */; };
 		246155C4173BF3AB00ECB2E8 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246155C3173BF3AB00ECB2E8 /* WebViewController.m */; };
 		246155C7173C0E1E00ECB2E8 /* 152-rolodex.png in Resources */ = {isa = PBXBuildFile; fileRef = 246155C5173C0E1E00ECB2E8 /* 152-rolodex.png */; };
@@ -86,6 +89,10 @@
 		240B169117356750002EDD48 /* FaktaQueryService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaktaQueryService.m; sourceTree = "<group>"; };
 		240B169317356A7E002EDD48 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		240B169417356A7E002EDD48 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		240ECC47173D840C00B6A610 /* FavoriteActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteActivity.h; sourceTree = "<group>"; };
+		240ECC48173D840C00B6A610 /* FavoriteActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteActivity.m; sourceTree = "<group>"; };
+		240ECC4A173D85EB00B6A610 /* star-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-white.png"; sourceTree = "<group>"; };
+		240ECC4B173D85EB00B6A610 /* star-white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-white@2x.png"; sourceTree = "<group>"; };
 		24545110173D36CD00B797F1 /* FavoritterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritterViewController.h; sourceTree = "<group>"; };
 		24545111173D36CD00B797F1 /* FavoritterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritterViewController.m; sourceTree = "<group>"; };
 		246155C2173BF3AB00ECB2E8 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
@@ -167,6 +174,8 @@
 		240B164A17355F8A002EDD48 /* FinurligeFakta */ = {
 			isa = PBXGroup;
 			children = (
+				240ECC47173D840C00B6A610 /* FavoriteActivity.h */,
+				240ECC48173D840C00B6A610 /* FavoriteActivity.m */,
 				240B168F173564C4002EDD48 /* images */,
 				240B165317355F8A002EDD48 /* AppDelegate.h */,
 				240B165417355F8A002EDD48 /* AppDelegate.m */,
@@ -226,6 +235,8 @@
 		240B168F173564C4002EDD48 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				240ECC4A173D85EB00B6A610 /* star-white.png */,
+				240ECC4B173D85EB00B6A610 /* star-white@2x.png */,
 				246155CD173C115E00ECB2E8 /* quote.png */,
 				246155C9173C0F0E00ECB2E8 /* 42-info.png */,
 				246155CA173C0F0E00ECB2E8 /* 42-info@2x.png */,
@@ -333,6 +344,8 @@
 				246155CB173C0F0E00ECB2E8 /* 42-info.png in Resources */,
 				246155CC173C0F0E00ECB2E8 /* 42-info@2x.png in Resources */,
 				246155CE173C115E00ECB2E8 /* quote.png in Resources */,
+				240ECC4C173D85EB00B6A610 /* star-white.png in Resources */,
+				240ECC4D173D85EB00B6A610 /* star-white@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +403,7 @@
 				24E313A917369CF000F8E003 /* Fakta.m in Sources */,
 				246155C4173BF3AB00ECB2E8 /* WebViewController.m in Sources */,
 				24545112173D36CD00B797F1 /* FavoritterViewController.m in Sources */,
+				240ECC49173D840C00B6A610 /* FavoriteActivity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

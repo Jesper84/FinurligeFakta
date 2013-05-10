@@ -9,7 +9,7 @@
 #import "Fakta.h"
 
 @implementation Fakta
-@synthesize guid, title, author, content, url;
+@synthesize guid, title, author, content, url, sourceTitle;
 
 
 - (NSString *)description{

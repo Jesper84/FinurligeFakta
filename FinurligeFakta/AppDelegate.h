@@ -7,14 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#define kFavoriteList @"favorite.plist"
+#import "Fakta.h"
+#define kFavoriteList @"favorites.plist"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) NSArray *favoriteList;
-
-- (void)saveFavoriteList:(NSArray *)favorites;
-
-- (NSArray *)loadFavoriteList;
+@property (strong, nonatomic) NSMutableArray *favoriteList;
+- (void)addFactToFavorites:(Fakta *)fact;
+- (void)loadFavoriteList;
 
 @end
