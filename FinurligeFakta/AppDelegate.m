@@ -9,6 +9,27 @@
 #import "AppDelegate.h"
 
 @implementation AppDelegate
+@synthesize favoriteList;
+
+- (void)saveFavoriteList:(NSArray *)favorites{
+    [favorites writeToFile:[self favoritesFilePath] atomically:YES];
+}
+
+- (NSString *)favoritesFilePath{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    return [documentsDirectory stringByAppendingPathComponent:kFavoriteList];
+}
+
+- (NSArray *)loadFavoriteList{
+    NSString *favoriteFilePath = [self favoritesFilePath];
+    if([[NSFileManager defaultManager] fileExistsAtPath:favoriteFilePath]){
+        favoriteList = [[NSMutableArray alloc] initWithContentsOfFile:favoriteFilePath];
+    }else {
+        favoriteList = [[NSMutableArray alloc] init];
+    }
+    return favoriteList;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

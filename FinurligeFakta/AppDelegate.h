@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#define kFavoriteList @"favorite.plist"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) NSArray *favoriteList;
+
+- (void)saveFavoriteList:(NSArray *)favorites;
+
+- (NSArray *)loadFavoriteList;
 
 @end

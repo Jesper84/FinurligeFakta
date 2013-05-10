@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FavoritterViewController : UIViewController
-
+@interface FavoritterViewController : UITableViewController
+@property (strong, nonatomic) NSMutableArray *favorites;
 @end
