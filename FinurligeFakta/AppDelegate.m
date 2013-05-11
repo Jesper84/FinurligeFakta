@@ -17,14 +17,19 @@
     [self saveFavoriteList];
 }
 
+- (void)removeFactFromFavoriteList:(Fakta *)fact{
+    [favoriteList removeObject:fact];
+    [self saveFavoriteList];
+}
+
 - (void)saveFavoriteList{
-    [favoriteList writeToFile:[self favoriteFilePath] atomically:YES];
+    [NSKeyedArchiver archiveRootObject:self.favoriteList toFile:[self favoriteFilePath]];
 }
 
 - (void)loadFavoriteList{
     NSString *favoriteFilePath = [self favoriteFilePath];
     if ([[NSFileManager defaultManager] fileExistsAtPath:favoriteFilePath]) {
-        favoriteList = [[NSMutableArray alloc] initWithContentsOfFile:favoriteFilePath];
+        favoriteList = [NSKeyedUnarchiver unarchiveObjectWithFile:[self favoriteFilePath]];
     } else {
         favoriteList = [[NSMutableArray alloc] init];
     }

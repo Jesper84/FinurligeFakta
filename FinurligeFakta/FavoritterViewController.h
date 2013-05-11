@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface FavoritterViewController : UITableViewController
+#import "Fakta.h"
+@interface FavoritterViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) NSMutableArray *favorites;
+@property (strong, nonatomic) Fakta *selectedFact;
+@property (strong, nonatomic) IBOutlet UITableView *myTableView;
 @end

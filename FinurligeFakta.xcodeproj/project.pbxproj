@@ -32,6 +32,7 @@
 		240ECC4C173D85EB00B6A610 /* star-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 240ECC4A173D85EB00B6A610 /* star-white.png */; };
 		240ECC4D173D85EB00B6A610 /* star-white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 240ECC4B173D85EB00B6A610 /* star-white@2x.png */; };
 		24545112173D36CD00B797F1 /* FavoritterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24545111173D36CD00B797F1 /* FavoritterViewController.m */; };
+		245EC72C173E26250098AEB7 /* FavoriteFactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245EC72B173E26250098AEB7 /* FavoriteFactViewController.m */; };
 		246155C4173BF3AB00ECB2E8 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246155C3173BF3AB00ECB2E8 /* WebViewController.m */; };
 		246155C7173C0E1E00ECB2E8 /* 152-rolodex.png in Resources */ = {isa = PBXBuildFile; fileRef = 246155C5173C0E1E00ECB2E8 /* 152-rolodex.png */; };
 		246155C8173C0E1E00ECB2E8 /* 152-rolodex@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 246155C6173C0E1E00ECB2E8 /* 152-rolodex@2x.png */; };
@@ -95,6 +96,8 @@
 		240ECC4B173D85EB00B6A610 /* star-white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-white@2x.png"; sourceTree = "<group>"; };
 		24545110173D36CD00B797F1 /* FavoritterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritterViewController.h; sourceTree = "<group>"; };
 		24545111173D36CD00B797F1 /* FavoritterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritterViewController.m; sourceTree = "<group>"; };
+		245EC72A173E26250098AEB7 /* FavoriteFactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteFactViewController.h; sourceTree = "<group>"; };
+		245EC72B173E26250098AEB7 /* FavoriteFactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteFactViewController.m; sourceTree = "<group>"; };
 		246155C2173BF3AB00ECB2E8 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		246155C3173BF3AB00ECB2E8 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		246155C5173C0E1E00ECB2E8 /* 152-rolodex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "152-rolodex.png"; sourceTree = "<group>"; };
@@ -195,6 +198,8 @@
 				246155C3173BF3AB00ECB2E8 /* WebViewController.m */,
 				24545110173D36CD00B797F1 /* FavoritterViewController.h */,
 				24545111173D36CD00B797F1 /* FavoritterViewController.m */,
+				245EC72A173E26250098AEB7 /* FavoriteFactViewController.h */,
+				245EC72B173E26250098AEB7 /* FavoriteFactViewController.m */,
 			);
 			path = FinurligeFakta;
 			sourceTree = "<group>";
@@ -404,6 +409,7 @@
 				246155C4173BF3AB00ECB2E8 /* WebViewController.m in Sources */,
 				24545112173D36CD00B797F1 /* FavoritterViewController.m in Sources */,
 				240ECC49173D840C00B6A610 /* FavoriteActivity.m in Sources */,
+				245EC72C173E26250098AEB7 /* FavoriteFactViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

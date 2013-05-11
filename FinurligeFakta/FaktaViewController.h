@@ -19,6 +19,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *sentByLabel;
 @property (strong, nonatomic) Fakta *currentFakta;
 
+
 - (void)addCurrentFactAsFavorite;
 
 @end

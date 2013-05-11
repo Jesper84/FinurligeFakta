@@ -70,8 +70,13 @@ sentByLabel, seeMoreButton;
 
 - (void)addCurrentFactAsFavorite{
     AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
-    [delegate addFactToFavorites:self.currentFakta];
-    [self updateFavoriteBadge];
+    if ([delegate.favoriteList containsObject:self.currentFakta]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Allerede favorit" message:@"Dette fakta er allerede på favoritlisten" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    } else {
+        [delegate addFactToFavorites:self.currentFakta];
+        [self updateFavoriteBadge];
+    }
 }
 
 - (void)updateFavoriteBadge{
@@ -84,10 +89,7 @@ sentByLabel, seeMoreButton;
     } else {
         controller.tabBarItem.badgeValue = [NSString stringWithFormat:@"%d", number];
     }
-    
-    
 }
-
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:@"showWebview"]) {

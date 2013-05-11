@@ -34,29 +34,29 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "FinurligeFakta/FaktaViewController.m"
-         timestampString = "389909357.221307"
+         timestampString = "389948889.313398"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "72"
-         endingLineNumber = "72"
+         startingLineNumber = "74"
+         endingLineNumber = "74"
          landmarkName = "-addCurrentFactAsFavorite"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "FinurligeFakta/FaktaViewController.m"
-         timestampString = "389909357.221307"
+         timestampString = "389948889.313398"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "80"
-         endingLineNumber = "80"
+         startingLineNumber = "85"
+         endingLineNumber = "85"
          landmarkName = "-updateFavoriteBadge"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "FinurligeFakta/AppDelegate.m"
@@ -69,15 +69,15 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "FinurligeFakta/AppDelegate.m"
-         timestampString = "389913224.234638"
+         timestampString = "389953748.340961"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "25"
-         endingLineNumber = "25"
+         startingLineNumber = "30"
+         endingLineNumber = "30"
          landmarkName = "-loadFavoriteList"
          landmarkType = "5">
       </FileBreakpoint>
@@ -86,12 +86,38 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "FinurligeFakta/AppDelegate.m"
-         timestampString = "389913508.785111"
+         timestampString = "389953748.340961"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "41"
-         endingLineNumber = "41"
+         startingLineNumber = "46"
+         endingLineNumber = "46"
          landmarkName = "-favoriteFilePath"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "FinurligeFakta/FavoritterViewController.m"
+         timestampString = "389950514.422868"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "42"
+         endingLineNumber = "42"
+         landmarkName = "-tableView:didSelectRowAtIndexPath:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "FinurligeFakta/FavoritterViewController.m"
+         timestampString = "389953748.340961"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "117"
+         endingLineNumber = "117"
+         landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

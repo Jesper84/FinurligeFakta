@@ -15,5 +15,7 @@
 @property (strong, nonatomic) NSMutableArray *favoriteList;
 - (void)addFactToFavorites:(Fakta *)fact;
 - (void)loadFavoriteList;
+- (void)saveFavoriteList;
+- (void)removeFactFromFavoriteList:(Fakta *)fact;
 
 @end

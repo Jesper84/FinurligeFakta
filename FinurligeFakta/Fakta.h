@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Fakta : NSObject
+@interface Fakta : NSObject <NSCoding>
 @property (nonatomic, copy) NSString *guid;
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *author;
