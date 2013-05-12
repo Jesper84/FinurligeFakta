@@ -137,6 +137,10 @@ sentByLabel, seeMoreButton;
     titleLabel.text = self.currentFakta.title;
     sentByLabel.text = self.currentFakta.author;
     
+    faktaText.hidden = NO;
+    titleLabel.hidden = NO;
+    sentByLabel.hidden = NO;
+    
     [faktaText setContentOffset:CGPointMake(0, 0) animated:NO];
     [faktaText flashScrollIndicators];
 }

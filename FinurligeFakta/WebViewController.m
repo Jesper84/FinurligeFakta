@@ -14,7 +14,7 @@
 @end
 
 @implementation WebViewController
-@synthesize webView, url, webViewTitle;
+@synthesize webView, url, webViewTitle, webViewLoading;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -33,6 +33,7 @@
     self.webView.delegate = self;
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:self.url]];
     [self.webView loadRequest:request];
+
 }
 
 - (IBAction)okPressed:(id)sender{
@@ -41,8 +42,11 @@
 
 -(void)webViewDidStartLoad:(UIWebView *)webView{
     NSLog(@"startload");
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.labelText = @"Henter side...";
+    if(!self.webViewLoading){
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        hud.labelText = @"Henter side...";
+        self.webViewLoading = YES;
+    }
 }
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView{

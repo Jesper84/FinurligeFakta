@@ -15,4 +15,5 @@
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) IBOutlet UINavigationBar *navBar;
 
+@property (nonatomic) BOOL webViewLoading;
 @end
