@@ -547,10 +547,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 943F5E0C0C9241F6B3EA3E9C /* Pods.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FinurligeFakta/FinurligeFakta-Prefix.pch";
 				INFOPLIST_FILE = "FinurligeFakta/FinurligeFakta-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
