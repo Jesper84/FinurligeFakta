@@ -18,6 +18,7 @@
 @property (strong, nonatomic) FaktaQueryService *queryService;
 @property (strong, nonatomic) IBOutlet UILabel *sentByLabel;
 @property (strong, nonatomic) Fakta *currentFakta;
+@property (nonatomic) BOOL firstFactLoaded;
 
 
 - (void)addCurrentFactAsFavorite;

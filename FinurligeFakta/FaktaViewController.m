@@ -20,7 +20,7 @@
 
 @implementation FaktaViewController
 @synthesize faktaText, titleLabel, shareButton, queryService,
-sentByLabel, seeMoreButton;
+sentByLabel, seeMoreButton, firstFactLoaded;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -33,6 +33,7 @@ sentByLabel, seeMoreButton;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    firstFactLoaded = NO;
 	// Do any additional setup after loading the view.
     [[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]]];
     UIImage *buttonImage = [[UIImage imageNamed:@"orangeButton"] resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
@@ -130,7 +131,15 @@ sentByLabel, seeMoreButton;
 }
 
 - (void)factRequestComplete:(NSDictionary *)factData{
-    
+    if (firstFactLoaded) {
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationDuration:1.0];
+        [UIView setAnimationDelay:0.0];
+        [UIView setAnimationBeginsFromCurrentState:YES];
+        [UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:self.view cache:YES];
+        [UIView commitAnimations];
+
+    }
     [self createNewFact:factData];
     
     faktaText.text = self.currentFakta.content;
@@ -143,6 +152,7 @@ sentByLabel, seeMoreButton;
     
     [faktaText setContentOffset:CGPointMake(0, 0) animated:NO];
     [faktaText flashScrollIndicators];
+    firstFactLoaded = YES;
 }
 
 - (void)didReceiveMemoryWarning

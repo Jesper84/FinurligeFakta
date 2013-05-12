@@ -278,8 +278,7 @@ App'en er ikke udviklet af Aarhus Kommunes Biblioteker, men bruger webservicen D
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPc-Iw-U6d">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="5zM-kD-azC"/>
-                                    <constraint firstAttribute="height" constant="51" id="uGY-Fh-Y1O"/>
+                                    <constraint firstAttribute="width" constant="44" id="10F-GO-KBJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" backgroundImage="01-refresh.png">
@@ -333,12 +332,12 @@ App'en er ikke udviklet af Aarhus Kommunes Biblioteker, men bruger webservicen D
                             <constraint firstItem="A9h-Oq-cVD" firstAttribute="top" secondItem="mJq-Ng-Gjw" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="5Mk-er-YO1"/>
                             <constraint firstAttribute="bottom" secondItem="SKM-2o-qYK" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="6FW-BW-raj"/>
                             <constraint firstAttribute="trailing" secondItem="mJq-Ng-Gjw" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="LTr-uA-CVj"/>
-                            <constraint firstAttribute="trailing" secondItem="EPc-Iw-U6d" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Mz0-Ip-RFR"/>
                             <constraint firstAttribute="bottom" secondItem="eU9-g1-mxY" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="Osw-en-2Tf"/>
                             <constraint firstItem="dmk-ll-pJa" firstAttribute="leading" secondItem="DDs-e6-HLm" secondAttribute="leading" type="default" id="Qba-Bs-y6e"/>
                             <constraint firstAttribute="bottom" secondItem="wqd-nC-9oa" secondAttribute="bottom" constant="102" id="Rgr-GI-mgp"/>
                             <constraint firstAttribute="trailing" secondItem="eU9-g1-mxY" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Rla-jw-ioE"/>
                             <constraint firstItem="mJq-Ng-Gjw" firstAttribute="centerY" secondItem="kjc-AN-yoV" secondAttribute="centerY" type="default" id="TDd-lj-uxO"/>
+                            <constraint firstAttribute="trailing" secondItem="EPc-Iw-U6d" secondAttribute="trailing" constant="26" id="UFS-Il-q4Q"/>
                             <constraint firstItem="EPc-Iw-U6d" firstAttribute="top" secondItem="DDs-e6-HLm" secondAttribute="top" constant="20" symbolic="YES" type="default" id="UtE-ZE-Xpd"/>
                             <constraint firstItem="A9h-Oq-cVD" firstAttribute="leading" secondItem="DDs-e6-HLm" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="aAs-ul-hC7"/>
                             <constraint firstItem="wqd-nC-9oa" firstAttribute="leading" secondItem="DDs-e6-HLm" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="bPV-Tk-DCf"/>
