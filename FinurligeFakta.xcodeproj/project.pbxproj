@@ -45,6 +45,8 @@
 		246155CB173C0F0E00ECB2E8 /* 42-info.png in Resources */ = {isa = PBXBuildFile; fileRef = 246155C9173C0F0E00ECB2E8 /* 42-info.png */; };
 		246155CC173C0F0E00ECB2E8 /* 42-info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 246155CA173C0F0E00ECB2E8 /* 42-info@2x.png */; };
 		246155CE173C115E00ECB2E8 /* quote.png in Resources */ = {isa = PBXBuildFile; fileRef = 246155CD173C115E00ECB2E8 /* quote.png */; };
+		247014ED174A3406004C7410 /* 02-redo.png in Resources */ = {isa = PBXBuildFile; fileRef = 247014EB174A3406004C7410 /* 02-redo.png */; };
+		247014EE174A3406004C7410 /* 02-redo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 247014EC174A3406004C7410 /* 02-redo@2x.png */; };
 		24B29BE8173AF0C5001D7BD1 /* orangeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 24B29BE4173AF0C5001D7BD1 /* orangeButton.png */; };
 		24B29BE9173AF0C5001D7BD1 /* orangeButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24B29BE5173AF0C5001D7BD1 /* orangeButton@2x.png */; };
 		24B29BEA173AF0C5001D7BD1 /* orangeButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 24B29BE6173AF0C5001D7BD1 /* orangeButtonHighlight.png */; };
@@ -115,6 +117,8 @@
 		246155C9173C0F0E00ECB2E8 /* 42-info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "42-info.png"; sourceTree = "<group>"; };
 		246155CA173C0F0E00ECB2E8 /* 42-info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "42-info@2x.png"; sourceTree = "<group>"; };
 		246155CD173C115E00ECB2E8 /* quote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quote.png; sourceTree = "<group>"; };
+		247014EB174A3406004C7410 /* 02-redo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "02-redo.png"; sourceTree = "<group>"; };
+		247014EC174A3406004C7410 /* 02-redo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "02-redo@2x.png"; sourceTree = "<group>"; };
 		24B29BE4173AF0C5001D7BD1 /* orangeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orangeButton.png; sourceTree = "<group>"; };
 		24B29BE5173AF0C5001D7BD1 /* orangeButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orangeButton@2x.png"; sourceTree = "<group>"; };
 		24B29BE6173AF0C5001D7BD1 /* orangeButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orangeButtonHighlight.png; sourceTree = "<group>"; };
@@ -248,6 +252,8 @@
 		240B168F173564C4002EDD48 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				247014EB174A3406004C7410 /* 02-redo.png */,
+				247014EC174A3406004C7410 /* 02-redo@2x.png */,
 				245EC73C173FC7130098AEB7 /* 01-refresh.png */,
 				245EC73D173FC7130098AEB7 /* 01-refresh@2x.png */,
 				245EC734173FB61F0098AEB7 /* icon57.png */,
@@ -367,6 +373,8 @@
 				245EC73B173FB61F0098AEB7 /* icon1024.png in Resources */,
 				245EC73E173FC7130098AEB7 /* 01-refresh.png in Resources */,
 				245EC73F173FC7130098AEB7 /* 01-refresh@2x.png in Resources */,
+				247014ED174A3406004C7410 /* 02-redo.png in Resources */,
+				247014EE174A3406004C7410 /* 02-redo@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

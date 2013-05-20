@@ -64,11 +64,11 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1j-A1-L13">
                                 <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="0.33000000000000002" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="314" id="9sM-XY-olG"/>
+                                    <constraint firstAttribute="height" constant="314" type="user" id="9sM-XY-olG"/>
                                 </constraints>
                                 <string key="text">De Finurlige Fakta er opstået i et samarbejde imellem Aarhus Kommunes Biblioteker, Biblioteksvagten og Odense Bibliotekerne – men de Finurlige Fakta er skrevet af biblioteksfolk i hele Danmark!
 
-App'en er ikke udviklet af Aarhus Kommunes Biblioteker, men bruger webservicen De Finurlige Fakta stiller til rådighed </string>
+App'en er ikke udviklet af Aarhus Kommunes Biblioteker, men bruger webservicen De Finurlige Fakta stiller til rådighed.</string>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -76,9 +76,10 @@ App'en er ikke udviklet af Aarhus Kommunes Biblioteker, men bruger webservicen D
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="8VH-F9-Bxu" firstAttribute="leading" secondItem="eB5-ke-fcL" secondAttribute="leading" type="default" id="CWN-tq-TbD"/>
-                            <constraint firstItem="X1j-A1-L13" firstAttribute="top" secondItem="eB5-ke-fcL" secondAttribute="top" constant="154" id="DOh-We-zJh"/>
+                            <constraint firstItem="X1j-A1-L13" firstAttribute="top" secondItem="eB5-ke-fcL" secondAttribute="top" constant="154" type="user" id="DOh-We-zJh"/>
                             <constraint firstItem="X1j-A1-L13" firstAttribute="leading" secondItem="eB5-ke-fcL" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="IJc-9r-Fna"/>
                             <constraint firstItem="8VH-F9-Bxu" firstAttribute="top" secondItem="eB5-ke-fcL" secondAttribute="top" constant="53" id="fzJ-rK-KO8"/>
+                            <constraint firstAttribute="bottom" secondItem="X1j-A1-L13" secondAttribute="bottom" constant="31" type="user" id="oh1-pV-Com"/>
                             <constraint firstAttribute="trailing" secondItem="X1j-A1-L13" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="t5t-4g-Ow7"/>
                         </constraints>
                     </view>
@@ -132,27 +133,27 @@ App'en er ikke udviklet af Aarhus Kommunes Biblioteker, men bruger webservicen D
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="ybr-qL-tPm">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="7mu-iN-jdf"/>
+                                    <constraint firstAttribute="height" constant="49" type="user" id="7mu-iN-jdf"/>
                                     <constraint firstAttribute="width" constant="146" id="Iw0-tb-TXg"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="quote.png" translatesAutoresizingMaskIntoConstraints="NO" id="eHu-ae-bhq">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="d1O-Zw-Ogo"/>
-                                    <constraint firstAttribute="height" constant="42" id="zuS-td-8gp"/>
+                                    <constraint firstAttribute="height" constant="42" type="user" id="zuS-td-8gp"/>
                                 </constraints>
                             </imageView>
                             <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Content text" translatesAutoresizingMaskIntoConstraints="NO" id="MUD-Ew-q1O">
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="0.33000000000000002" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="280" id="udf-Ry-aAw"/>
+                                    <constraint firstAttribute="height" constant="282" type="user" id="rPf-eM-Qcc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="227" translatesAutoresizingMaskIntoConstraints="NO" id="5nQ-th-rsk">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="62" id="w0d-vZ-jSB"/>
+                                    <constraint firstAttribute="height" constant="57" id="14S-KB-gjg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -160,7 +161,7 @@ App'en er ikke udviklet af Aarhus Kommunes Biblioteker, men bruger webservicen D
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Indsendt af:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDf-Zs-Koj">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="PLN-Ka-CAx"/>
+                                    <constraint firstAttribute="height" constant="21" type="user" id="ndx-eV-5HY"/>
                                     <constraint firstAttribute="width" constant="102" id="rOs-E0-8XP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
@@ -178,19 +179,20 @@ App'en er ikke udviklet af Aarhus Kommunes Biblioteker, men bruger webservicen D
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="5nQ-th-rsk" firstAttribute="top" secondItem="ybr-qL-tPm" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="1Lr-0V-TPU"/>
-                            <constraint firstItem="ybr-qL-tPm" firstAttribute="leading" secondItem="JsI-C9-5tW" secondAttribute="leading" type="default" id="2aB-oN-3dO"/>
-                            <constraint firstItem="nDN-Uc-158" firstAttribute="top" secondItem="VDf-Zs-Koj" secondAttribute="top" type="default" id="7za-Rl-g4G"/>
-                            <constraint firstItem="eHu-ae-bhq" firstAttribute="top" secondItem="JsI-C9-5tW" secondAttribute="top" constant="110" id="8kO-OE-MYK"/>
-                            <constraint firstAttribute="bottom" secondItem="VDf-Zs-Koj" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="Bdm-Uw-iAE"/>
+                            <constraint firstItem="VDf-Zs-Koj" firstAttribute="top" secondItem="MUD-Ew-q1O" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="01w-id-GVN"/>
+                            <constraint firstAttribute="bottom" secondItem="VDf-Zs-Koj" secondAttribute="bottom" constant="20" symbolic="YES" type="user" id="Bdm-Uw-iAE"/>
                             <constraint firstAttribute="trailing" secondItem="nDN-Uc-158" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="MkY-X2-hE6"/>
+                            <constraint firstItem="MUD-Ew-q1O" firstAttribute="top" secondItem="eHu-ae-bhq" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="NqX-nT-TL9"/>
                             <constraint firstAttribute="trailing" secondItem="5nQ-th-rsk" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="UuF-cl-WVE"/>
                             <constraint firstItem="MUD-Ew-q1O" firstAttribute="leading" secondItem="JsI-C9-5tW" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="W1b-9B-QzG"/>
                             <constraint firstItem="5nQ-th-rsk" firstAttribute="leading" secondItem="eHu-ae-bhq" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="WMS-aV-E71"/>
+                            <constraint firstItem="eHu-ae-bhq" firstAttribute="top" secondItem="JsI-C9-5tW" secondAttribute="top" constant="118" type="user" id="WO0-bc-94b"/>
                             <constraint firstItem="eHu-ae-bhq" firstAttribute="leading" secondItem="JsI-C9-5tW" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="aeK-B1-zSW"/>
-                            <constraint firstItem="MUD-Ew-q1O" firstAttribute="top" secondItem="5nQ-th-rsk" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="bCT-RT-vRm"/>
+                            <constraint firstItem="5nQ-th-rsk" firstAttribute="top" secondItem="ybr-qL-tPm" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="d6h-2N-kbC"/>
                             <constraint firstAttribute="bottom" secondItem="nDN-Uc-158" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="fpX-UI-xcN"/>
-                            <constraint firstItem="ybr-qL-tPm" firstAttribute="top" secondItem="JsI-C9-5tW" secondAttribute="top" constant="45" id="iNS-22-vmj"/>
+                            <constraint firstItem="ybr-qL-tPm" firstAttribute="leading" secondItem="JsI-C9-5tW" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="m0A-hZ-mPa"/>
+                            <constraint firstItem="ybr-qL-tPm" firstAttribute="top" secondItem="JsI-C9-5tW" secondAttribute="top" constant="53" id="nTE-WB-Nrl"/>
+                            <constraint firstItem="nDN-Uc-158" firstAttribute="top" secondItem="MUD-Ew-q1O" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="sud-D0-NR7"/>
                             <constraint firstAttribute="trailing" secondItem="MUD-Ew-q1O" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="vea-jI-3bt"/>
                             <constraint firstItem="VDf-Zs-Koj" firstAttribute="leading" secondItem="JsI-C9-5tW" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="wPo-He-Vsm"/>
                         </constraints>
@@ -239,7 +241,7 @@ App'en er ikke udviklet af Aarhus Kommunes Biblioteker, men bruger webservicen D
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="quote.png" translatesAutoresizingMaskIntoConstraints="NO" id="kjc-AN-yoV">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="4fF-sa-cCX"/>
-                                    <constraint firstAttribute="height" constant="42" id="Of9-Xz-OTP"/>
+                                    <constraint firstAttribute="height" constant="42" type="user" id="Of9-Xz-OTP"/>
                                 </constraints>
                             </imageView>
                             <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Content text" translatesAutoresizingMaskIntoConstraints="NO" id="A9h-Oq-cVD">
@@ -249,13 +251,14 @@ App'en er ikke udviklet af Aarhus Kommunes Biblioteker, men bruger webservicen D
                                 </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="286" id="Bja-Wt-m8N"/>
+                                    <constraint firstAttribute="height" constant="217" type="user" id="u8R-47-UMC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="228" translatesAutoresizingMaskIntoConstraints="NO" id="mJq-Ng-Gjw">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="76" id="59u-cD-0yB"/>
+                                    <constraint firstAttribute="height" constant="76" type="user" id="59u-cD-0yB"/>
                                     <constraint firstAttribute="width" constant="228" id="fHQ-Uu-Siq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="20"/>
@@ -281,7 +284,7 @@ App'en er ikke udviklet af Aarhus Kommunes Biblioteker, men bruger webservicen D
                                     <constraint firstAttribute="width" constant="44" id="10F-GO-KBJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="01-refresh.png">
+                                <state key="normal" backgroundImage="02-redo@2x.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -329,24 +332,25 @@ App'en er ikke udviklet af Aarhus Kommunes Biblioteker, men bruger webservicen D
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="A9h-Oq-cVD" firstAttribute="top" secondItem="mJq-Ng-Gjw" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="5Mk-er-YO1"/>
+                            <constraint firstItem="dmk-ll-pJa" firstAttribute="leading" secondItem="DDs-e6-HLm" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="4xz-Zk-zF2"/>
+                            <constraint firstItem="A9h-Oq-cVD" firstAttribute="top" secondItem="mJq-Ng-Gjw" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="5Mk-er-YO1"/>
                             <constraint firstAttribute="bottom" secondItem="SKM-2o-qYK" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="6FW-BW-raj"/>
+                            <constraint firstItem="kjc-AN-yoV" firstAttribute="top" secondItem="DDs-e6-HLm" secondAttribute="top" constant="74" type="user" id="ABh-xx-ePQ"/>
                             <constraint firstAttribute="trailing" secondItem="mJq-Ng-Gjw" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="LTr-uA-CVj"/>
                             <constraint firstAttribute="bottom" secondItem="eU9-g1-mxY" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="Osw-en-2Tf"/>
-                            <constraint firstItem="dmk-ll-pJa" firstAttribute="leading" secondItem="DDs-e6-HLm" secondAttribute="leading" type="default" id="Qba-Bs-y6e"/>
                             <constraint firstAttribute="bottom" secondItem="wqd-nC-9oa" secondAttribute="bottom" constant="102" id="Rgr-GI-mgp"/>
                             <constraint firstAttribute="trailing" secondItem="eU9-g1-mxY" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Rla-jw-ioE"/>
-                            <constraint firstItem="mJq-Ng-Gjw" firstAttribute="centerY" secondItem="kjc-AN-yoV" secondAttribute="centerY" type="default" id="TDd-lj-uxO"/>
+                            <constraint firstItem="mJq-Ng-Gjw" firstAttribute="centerY" secondItem="kjc-AN-yoV" secondAttribute="centerY" type="user" id="TDd-lj-uxO"/>
                             <constraint firstAttribute="trailing" secondItem="EPc-Iw-U6d" secondAttribute="trailing" constant="26" id="UFS-Il-q4Q"/>
                             <constraint firstItem="EPc-Iw-U6d" firstAttribute="top" secondItem="DDs-e6-HLm" secondAttribute="top" constant="20" symbolic="YES" type="default" id="UtE-ZE-Xpd"/>
                             <constraint firstItem="A9h-Oq-cVD" firstAttribute="leading" secondItem="DDs-e6-HLm" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="aAs-ul-hC7"/>
                             <constraint firstItem="wqd-nC-9oa" firstAttribute="leading" secondItem="DDs-e6-HLm" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="bPV-Tk-DCf"/>
                             <constraint firstAttribute="bottom" secondItem="0uH-0n-yJn" secondAttribute="bottom" constant="101" id="c24-js-Adz"/>
+                            <constraint firstItem="dmk-ll-pJa" firstAttribute="top" secondItem="DDs-e6-HLm" secondAttribute="top" constant="15" id="iGQ-RY-J1g"/>
+                            <constraint firstItem="dmk-ll-pJa" firstAttribute="bottom" secondItem="EPc-Iw-U6d" secondAttribute="bottom" type="default" id="kLa-01-F20"/>
                             <constraint firstAttribute="trailing" secondItem="0uH-0n-yJn" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ks1-BT-bXX"/>
-                            <constraint firstItem="dmk-ll-pJa" firstAttribute="top" secondItem="DDs-e6-HLm" secondAttribute="top" type="default" id="n1Q-By-BgL"/>
                             <constraint firstItem="kjc-AN-yoV" firstAttribute="leading" secondItem="DDs-e6-HLm" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="n1Z-bN-ig7"/>
-                            <constraint firstItem="A9h-Oq-cVD" firstAttribute="centerY" secondItem="DDs-e6-HLm" secondAttribute="centerY" type="default" id="nbE-NA-8kW"/>
-                            <constraint firstItem="mJq-Ng-Gjw" firstAttribute="top" secondItem="dmk-ll-pJa" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="oad-NS-PPg"/>
+                            <constraint firstItem="A9h-Oq-cVD" firstAttribute="centerY" secondItem="DDs-e6-HLm" secondAttribute="centerY" type="user" id="nbE-NA-8kW"/>
                             <constraint firstItem="SKM-2o-qYK" firstAttribute="leading" secondItem="DDs-e6-HLm" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="sdy-zn-GN3"/>
                         </constraints>
                     </view>
@@ -385,7 +389,7 @@ App'en er ikke udviklet af Aarhus Kommunes Biblioteker, men bruger webservicen D
         </scene>
     </scenes>
     <resources>
-        <image name="01-refresh.png" width="24" height="26"/>
+        <image name="02-redo@2x.png" width="60" height="51"/>
         <image name="152-rolodex.png" width="26" height="18"/>
         <image name="42-info.png" width="28" height="28"/>
         <image name="logo.png" width="250" height="96"/>
