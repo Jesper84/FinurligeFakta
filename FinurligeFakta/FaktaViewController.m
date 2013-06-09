@@ -20,7 +20,7 @@
 
 @implementation FaktaViewController
 @synthesize faktaText, titleLabel, shareButton, queryService,
-sentByLabel, seeMoreButton, firstFactLoaded;
+sentByLabel, seeMoreButton, firstFactLoaded, reloadButton;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -43,6 +43,8 @@ sentByLabel, seeMoreButton, firstFactLoaded;
     [seeMoreButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
     [seeMoreButton setBackgroundImage:buttonImageHighligt forState:UIControlStateHighlighted];
     
+    [reloadButton setBackgroundImage:[UIImage imageNamed:@"redo-white"] forState:UIControlStateHighlighted];
+    
     [self updateFavoriteBadge];
     
     queryService = [[FaktaQueryService alloc] init];
@@ -50,9 +52,9 @@ sentByLabel, seeMoreButton, firstFactLoaded;
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
         [queryService queryGuid];
-        dispatch_async(dispatch_get_main_queue(), ^{
+/*        dispatch_async(dispatch_get_main_queue(), ^{
             [MBProgressHUD hideHUDForView:self.view animated:YES];
-        });
+        });*/
     });
 }
 
@@ -104,9 +106,9 @@ sentByLabel, seeMoreButton, firstFactLoaded;
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
         [queryService queryGuid];
-        dispatch_async(dispatch_get_main_queue(), ^{
+/*        dispatch_async(dispatch_get_main_queue(), ^{
             [MBProgressHUD hideHUDForView:self.view animated:YES];
-        });
+        });*/
     });
 }
 
@@ -153,6 +155,7 @@ sentByLabel, seeMoreButton, firstFactLoaded;
     [faktaText setContentOffset:CGPointMake(0, 0) animated:NO];
     [faktaText flashScrollIndicators];
     firstFactLoaded = YES;
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

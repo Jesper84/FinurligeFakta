@@ -13,4 +13,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *factTitle;
 @property (strong, nonatomic) IBOutlet UITextView *factText;
 @property (strong, nonatomic) IBOutlet UILabel *sentByLabel;
+@property (strong, nonatomic) IBOutlet UIButton *shareButton;
+@property (strong, nonatomic) IBOutlet UIButton *seeMoreButton;
 @end

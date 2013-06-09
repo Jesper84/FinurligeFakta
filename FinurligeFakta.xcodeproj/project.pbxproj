@@ -45,6 +45,8 @@
 		246155CE173C115E00ECB2E8 /* quote.png in Resources */ = {isa = PBXBuildFile; fileRef = 246155CD173C115E00ECB2E8 /* quote.png */; };
 		247014ED174A3406004C7410 /* 02-redo.png in Resources */ = {isa = PBXBuildFile; fileRef = 247014EB174A3406004C7410 /* 02-redo.png */; };
 		247014EE174A3406004C7410 /* 02-redo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 247014EC174A3406004C7410 /* 02-redo@2x.png */; };
+		2496C59A17650222009BA784 /* redo-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 2496C59817650222009BA784 /* redo-white.png */; };
+		2496C59B17650222009BA784 /* redo-white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2496C59917650222009BA784 /* redo-white@2x.png */; };
 		24B29BE8173AF0C5001D7BD1 /* orangeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 24B29BE4173AF0C5001D7BD1 /* orangeButton.png */; };
 		24B29BE9173AF0C5001D7BD1 /* orangeButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24B29BE5173AF0C5001D7BD1 /* orangeButton@2x.png */; };
 		24B29BEA173AF0C5001D7BD1 /* orangeButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 24B29BE6173AF0C5001D7BD1 /* orangeButtonHighlight.png */; };
@@ -115,6 +117,11 @@
 		246155CD173C115E00ECB2E8 /* quote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quote.png; sourceTree = "<group>"; };
 		247014EB174A3406004C7410 /* 02-redo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "02-redo.png"; sourceTree = "<group>"; };
 		247014EC174A3406004C7410 /* 02-redo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "02-redo@2x.png"; sourceTree = "<group>"; };
+		2496C59817650222009BA784 /* redo-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "redo-white.png"; path = "../../../Google Drive/GlyphishPro/icons/icons-white/redo-white.png"; sourceTree = "<group>"; };
+		2496C59917650222009BA784 /* redo-white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "redo-white@2x.png"; path = "../../../Google Drive/GlyphishPro/icons/icons-white/redo-white@2x.png"; sourceTree = "<group>"; };
+		2496C59C17650793009BA784 /* da */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = da; path = da.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		2496C59D17650793009BA784 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2496C59E17650793009BA784 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		24B29BE4173AF0C5001D7BD1 /* orangeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orangeButton.png; sourceTree = "<group>"; };
 		24B29BE5173AF0C5001D7BD1 /* orangeButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orangeButton@2x.png"; sourceTree = "<group>"; };
 		24B29BE6173AF0C5001D7BD1 /* orangeButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orangeButtonHighlight.png; sourceTree = "<group>"; };
@@ -248,6 +255,8 @@
 		240B168F173564C4002EDD48 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				2496C59817650222009BA784 /* redo-white.png */,
+				2496C59917650222009BA784 /* redo-white@2x.png */,
 				247014EB174A3406004C7410 /* 02-redo.png */,
 				247014EC174A3406004C7410 /* 02-redo@2x.png */,
 				245EC734173FB61F0098AEB7 /* icon57.png */,
@@ -326,6 +335,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				da,
 			);
 			mainGroup = 240B163817355F89002EDD48;
 			productRefGroup = 240B164217355F89002EDD48 /* Products */;
@@ -367,6 +377,8 @@
 				245EC73B173FB61F0098AEB7 /* icon1024.png in Resources */,
 				247014ED174A3406004C7410 /* 02-redo.png in Resources */,
 				247014EE174A3406004C7410 /* 02-redo@2x.png in Resources */,
+				2496C59A17650222009BA784 /* redo-white.png in Resources */,
+				2496C59B17650222009BA784 /* redo-white@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +464,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				240B164E17355F8A002EDD48 /* en */,
+				2496C59D17650793009BA784 /* da */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -460,6 +473,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				240B165D17355F8A002EDD48 /* en */,
+				2496C59C17650793009BA784 /* da */,
 			);
 			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
@@ -468,6 +482,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				240B167217355F8A002EDD48 /* en */,
+				2496C59E17650793009BA784 /* da */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -538,6 +553,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FinurligeFakta/FinurligeFakta-Prefix.pch";
 				INFOPLIST_FILE = "FinurligeFakta/FinurligeFakta-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -552,6 +568,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FinurligeFakta/FinurligeFakta-Prefix.pch";
 				INFOPLIST_FILE = "FinurligeFakta/FinurligeFakta-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";

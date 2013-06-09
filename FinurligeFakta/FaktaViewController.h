@@ -17,6 +17,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *seeMoreButton;
 @property (strong, nonatomic) FaktaQueryService *queryService;
 @property (strong, nonatomic) IBOutlet UILabel *sentByLabel;
+@property (strong, nonatomic) IBOutlet UIButton *reloadButton;
 @property (strong, nonatomic) Fakta *currentFakta;
 @property (nonatomic) BOOL firstFactLoaded;
 
