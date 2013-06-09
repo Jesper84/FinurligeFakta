@@ -71,7 +71,6 @@
 		240B164617355F8A002EDD48 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		240B164817355F8A002EDD48 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		240B164C17355F8A002EDD48 /* FinurligeFakta-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FinurligeFakta-Info.plist"; sourceTree = "<group>"; };
-		240B164E17355F8A002EDD48 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		240B165017355F8A002EDD48 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		240B165217355F8A002EDD48 /* FinurligeFakta-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FinurligeFakta-Prefix.pch"; sourceTree = "<group>"; };
 		240B165317355F8A002EDD48 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -79,11 +78,9 @@
 		240B165617355F8A002EDD48 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		240B165817355F8A002EDD48 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		240B165A17355F8A002EDD48 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		240B165D17355F8A002EDD48 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		240B166717355F8A002EDD48 /* FinurligeFaktaTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinurligeFaktaTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		240B166817355F8A002EDD48 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		240B167017355F8A002EDD48 /* FinurligeFaktaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FinurligeFaktaTests-Info.plist"; sourceTree = "<group>"; };
-		240B167217355F8A002EDD48 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		240B167417355F8A002EDD48 /* FinurligeFaktaTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinurligeFaktaTests.h; sourceTree = "<group>"; };
 		240B167517355F8A002EDD48 /* FinurligeFaktaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FinurligeFaktaTests.m; sourceTree = "<group>"; };
 		240B167F173560D6002EDD48 /* FaktaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaktaViewController.h; sourceTree = "<group>"; };
@@ -463,7 +460,6 @@
 		240B164D17355F8A002EDD48 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				240B164E17355F8A002EDD48 /* en */,
 				2496C59D17650793009BA784 /* da */,
 			);
 			name = InfoPlist.strings;
@@ -472,7 +468,6 @@
 		240B165C17355F8A002EDD48 /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				240B165D17355F8A002EDD48 /* en */,
 				2496C59C17650793009BA784 /* da */,
 			);
 			name = MainStoryboard.storyboard;
@@ -481,7 +476,6 @@
 		240B167117355F8A002EDD48 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				240B167217355F8A002EDD48 /* en */,
 				2496C59E17650793009BA784 /* da */,
 			);
 			name = InfoPlist.strings;
