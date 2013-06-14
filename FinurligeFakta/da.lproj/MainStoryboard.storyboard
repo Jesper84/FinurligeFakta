@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ZTC-HK-Uw1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4457.6" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ZTC-HK-Uw1">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3682.6"/>
     </dependencies>
     <scenes>
         <!--Web View Controller-->
@@ -9,13 +10,15 @@
             <objects>
                 <viewController id="awf-gY-MCL" customClass="WebViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EeG-jw-2au">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VhL-3g-VSI">
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                             <navigationBar contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="aV4-CV-Caj">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="0Kj-OM-uan">
                                         <barButtonItem key="rightBarButtonItem" title="OK" style="done" id="6qG-oQ-5oc">
@@ -29,15 +32,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="VhL-3g-VSI" firstAttribute="leading" secondItem="EeG-jw-2au" secondAttribute="leading" type="default" id="0Wf-eL-xk2"/>
-                            <constraint firstItem="VhL-3g-VSI" firstAttribute="top" secondItem="aV4-CV-Caj" secondAttribute="bottom" type="default" id="4YO-b0-x7S"/>
-                            <constraint firstItem="aV4-CV-Caj" firstAttribute="top" secondItem="EeG-jw-2au" secondAttribute="top" type="default" id="4gd-pa-Qnx"/>
-                            <constraint firstItem="VhL-3g-VSI" firstAttribute="bottom" secondItem="EeG-jw-2au" secondAttribute="bottom" type="default" id="Ent-OD-Pb4"/>
-                            <constraint firstItem="aV4-CV-Caj" firstAttribute="leading" secondItem="EeG-jw-2au" secondAttribute="leading" type="default" id="LdY-oq-ZQA"/>
-                            <constraint firstItem="aV4-CV-Caj" firstAttribute="trailing" secondItem="EeG-jw-2au" secondAttribute="trailing" type="default" id="lOc-LW-wGQ"/>
-                            <constraint firstItem="VhL-3g-VSI" firstAttribute="trailing" secondItem="EeG-jw-2au" secondAttribute="trailing" type="default" id="qth-m6-kl2"/>
+                            <constraint firstItem="VhL-3g-VSI" firstAttribute="leading" secondItem="EeG-jw-2au" secondAttribute="leading" id="0Wf-eL-xk2"/>
+                            <constraint firstItem="VhL-3g-VSI" firstAttribute="top" secondItem="aV4-CV-Caj" secondAttribute="bottom" id="4YO-b0-x7S"/>
+                            <constraint firstItem="aV4-CV-Caj" firstAttribute="top" secondItem="EeG-jw-2au" secondAttribute="top" id="4gd-pa-Qnx"/>
+                            <constraint firstItem="VhL-3g-VSI" firstAttribute="bottom" secondItem="EeG-jw-2au" secondAttribute="bottom" id="Ent-OD-Pb4"/>
+                            <constraint firstItem="aV4-CV-Caj" firstAttribute="leading" secondItem="EeG-jw-2au" secondAttribute="leading" id="LdY-oq-ZQA"/>
+                            <constraint firstItem="aV4-CV-Caj" firstAttribute="trailing" secondItem="EeG-jw-2au" secondAttribute="trailing" id="lOc-LW-wGQ"/>
+                            <constraint firstItem="VhL-3g-VSI" firstAttribute="trailing" secondItem="EeG-jw-2au" secondAttribute="trailing" id="qth-m6-kl2"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <connections>
                         <outlet property="navBar" destination="aV4-CV-Caj" id="MiL-dz-eJU"/>
                         <outlet property="webView" destination="VhL-3g-VSI" id="2ae-hO-yHL"/>
@@ -52,20 +56,15 @@
             <objects>
                 <viewController id="HUg-hN-DER" customClass="OmViewController" sceneMemberID="viewController">
                     <view key="view" userInteractionEnabled="NO" contentMode="scaleToFill" id="eB5-ke-fcL">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="8VH-F9-Bxu">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="239" id="lQs-fb-hXX"/>
-                                    <constraint firstAttribute="height" constant="75" id="zAd-eY-MH5"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="8VH-F9-Bxu">
+                                <rect key="frame" x="0.0" y="53" width="239" height="75"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1j-A1-L13">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1j-A1-L13">
+                                <rect key="frame" x="20" y="154" width="280" height="314"/>
                                 <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="0.33000000000000002" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="314" type="user" id="9sM-XY-olG"/>
-                                </constraints>
                                 <string key="text">De Finurlige Fakta er opstået i et samarbejde imellem Aarhus Kommunes Biblioteker, Biblioteksvagten og Odense Bibliotekerne – men de Finurlige Fakta er skrevet af biblioteksfolk i hele Danmark!
 
 App'en er ikke udviklet af Aarhus Kommunes Biblioteker, men bruger webservicen De Finurlige Fakta stiller til rådighed.</string>
@@ -74,15 +73,8 @@ App'en er ikke udviklet af Aarhus Kommunes Biblioteker, men bruger webservicen D
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="8VH-F9-Bxu" firstAttribute="leading" secondItem="eB5-ke-fcL" secondAttribute="leading" type="default" id="CWN-tq-TbD"/>
-                            <constraint firstItem="X1j-A1-L13" firstAttribute="top" secondItem="eB5-ke-fcL" secondAttribute="top" constant="154" type="user" id="DOh-We-zJh"/>
-                            <constraint firstItem="X1j-A1-L13" firstAttribute="leading" secondItem="eB5-ke-fcL" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="IJc-9r-Fna"/>
-                            <constraint firstItem="8VH-F9-Bxu" firstAttribute="top" secondItem="eB5-ke-fcL" secondAttribute="top" constant="53" id="fzJ-rK-KO8"/>
-                            <constraint firstAttribute="bottom" secondItem="X1j-A1-L13" secondAttribute="bottom" constant="31" type="user" id="oh1-pV-Com"/>
-                            <constraint firstAttribute="trailing" secondItem="X1j-A1-L13" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="t5t-4g-Ow7"/>
-                        </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="Om" image="42-info.png" id="gHy-sX-Xpe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u9b-wQ-laN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -94,7 +86,7 @@ App'en er ikke udviklet af Aarhus Kommunes Biblioteker, men bruger webservicen D
             <objects>
                 <tableViewController id="TsK-If-AdD" customClass="FavoritterViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="f9u-lP-AFW">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -102,7 +94,7 @@ App'en er ikke udviklet af Aarhus Kommunes Biblioteker, men bruger webservicen D
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="253" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
@@ -113,6 +105,7 @@ App'en er ikke udviklet af Aarhus Kommunes Biblioteker, men bruger webservicen D
                             <outlet property="delegate" destination="TsK-If-AdD" id="qab-vV-9kq"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Favoritter" id="b8E-wu-FKo"/>
                     <connections>
                         <outlet property="myTableView" destination="f9u-lP-AFW" id="Dos-Qx-AVm"/>
@@ -128,58 +121,41 @@ App'en er ikke udviklet af Aarhus Kommunes Biblioteker, men bruger webservicen D
             <objects>
                 <viewController id="lr0-hb-DcS" customClass="FavoriteFactViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JsI-C9-5tW">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="ybr-qL-tPm">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" type="user" id="7mu-iN-jdf"/>
-                                    <constraint firstAttribute="width" constant="146" id="Iw0-tb-TXg"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="ybr-qL-tPm">
+                                <rect key="frame" x="20" y="53" width="146" height="49"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="quote.png" translatesAutoresizingMaskIntoConstraints="NO" id="eHu-ae-bhq">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="45" id="d1O-Zw-Ogo"/>
-                                    <constraint firstAttribute="height" constant="42" type="user" id="zuS-td-8gp"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="quote.png" translatesAutoresizingMaskIntoConstraints="NO" id="eHu-ae-bhq">
+                                <rect key="frame" x="20" y="118" width="45" height="42"/>
                             </imageView>
-                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Content text" translatesAutoresizingMaskIntoConstraints="NO" id="MUD-Ew-q1O">
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Content text" translatesAutoresizingMaskIntoConstraints="NO" id="MUD-Ew-q1O">
+                                <rect key="frame" x="20" y="168" width="280" height="223"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="0.33000000000000002" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="223" type="user" id="DY3-cx-hN6"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="227" translatesAutoresizingMaskIntoConstraints="NO" id="5nQ-th-rsk">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="57" id="14S-KB-gjg"/>
-                                </constraints>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="227" translatesAutoresizingMaskIntoConstraints="NO" id="5nQ-th-rsk">
+                                <rect key="frame" x="73" y="110" width="227" height="57"/>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Indsendt af:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDf-Zs-Koj">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="102" id="ie5-vS-bRY"/>
-                                    <constraint firstAttribute="height" constant="21" type="user" id="ndx-eV-5HY"/>
-                                </constraints>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Indsendt af:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDf-Zs-Koj">
+                                <rect key="frame" x="20" y="399" width="102" height="21"/>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDN-Uc-158">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="183" id="kyH-5a-3A2"/>
-                                </constraints>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDN-Uc-158">
+                                <rect key="frame" x="117" y="399" width="183" height="21"/>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LmN-12-kwc">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="92" id="HT9-c5-yv3"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LmN-12-kwc">
+                                <rect key="frame" x="20" y="418" width="92" height="18"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Læs mere">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -192,7 +168,8 @@ App'en er ikke udviklet af Aarhus Kommunes Biblioteker, men bruger webservicen D
                                     <segue destination="awf-gY-MCL" kind="modal" identifier="showWebViewFavorite" id="Z3M-A7-mAo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRV-if-AWK">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRV-if-AWK">
+                                <rect key="frame" x="240" y="418" width="60" height="18"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Del fakta">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -208,30 +185,8 @@ App'en er ikke udviklet af Aarhus Kommunes Biblioteker, men bruger webservicen D
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="MUD-Ew-q1O" secondAttribute="bottom" constant="108" type="user" id="0EN-fm-1Ot"/>
-                            <constraint firstAttribute="trailing" secondItem="nDN-Uc-158" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="MkY-X2-hE6"/>
-                            <constraint firstItem="MUD-Ew-q1O" firstAttribute="top" secondItem="JsI-C9-5tW" secondAttribute="top" constant="168" type="user" id="NiQ-Em-pLd"/>
-                            <constraint firstItem="MUD-Ew-q1O" firstAttribute="top" secondItem="eHu-ae-bhq" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="NqX-nT-TL9"/>
-                            <constraint firstItem="nDN-Uc-158" firstAttribute="baseline" secondItem="VDf-Zs-Koj" secondAttribute="baseline" type="default" id="QZP-MI-c6r"/>
-                            <constraint firstAttribute="trailing" secondItem="aRV-if-AWK" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="RVv-fs-9Cu"/>
-                            <constraint firstItem="LmN-12-kwc" firstAttribute="leading" secondItem="JsI-C9-5tW" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="S8v-kO-mI7"/>
-                            <constraint firstItem="LmN-12-kwc" firstAttribute="baseline" secondItem="aRV-if-AWK" secondAttribute="baseline" type="user" id="SGN-7E-9VC"/>
-                            <constraint firstAttribute="trailing" secondItem="5nQ-th-rsk" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="UuF-cl-WVE"/>
-                            <constraint firstItem="MUD-Ew-q1O" firstAttribute="leading" secondItem="JsI-C9-5tW" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="W1b-9B-QzG"/>
-                            <constraint firstItem="5nQ-th-rsk" firstAttribute="leading" secondItem="eHu-ae-bhq" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="WMS-aV-E71"/>
-                            <constraint firstItem="eHu-ae-bhq" firstAttribute="leading" secondItem="JsI-C9-5tW" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="aeK-B1-zSW"/>
-                            <constraint firstItem="5nQ-th-rsk" firstAttribute="top" secondItem="ybr-qL-tPm" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="d6h-2N-kbC"/>
-                            <constraint firstItem="VDf-Zs-Koj" firstAttribute="top" secondItem="MUD-Ew-q1O" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="ez3-2r-mIE"/>
-                            <constraint firstAttribute="bottom" secondItem="LmN-12-kwc" secondAttribute="bottom" constant="20" symbolic="YES" type="user" id="flg-KO-mre"/>
-                            <constraint firstItem="ybr-qL-tPm" firstAttribute="leading" secondItem="JsI-C9-5tW" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="m0A-hZ-mPa"/>
-                            <constraint firstItem="ybr-qL-tPm" firstAttribute="top" secondItem="JsI-C9-5tW" secondAttribute="top" constant="53" id="nTE-WB-Nrl"/>
-                            <constraint firstItem="nDN-Uc-158" firstAttribute="top" secondItem="MUD-Ew-q1O" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="s7g-e1-pv1"/>
-                            <constraint firstAttribute="bottom" secondItem="aRV-if-AWK" secondAttribute="bottom" constant="20" symbolic="YES" type="user" id="tvT-Mv-sTS"/>
-                            <constraint firstAttribute="trailing" secondItem="MUD-Ew-q1O" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="vea-jI-3bt"/>
-                            <constraint firstItem="VDf-Zs-Koj" firstAttribute="leading" secondItem="JsI-C9-5tW" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="wPo-He-Vsm"/>
-                        </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="aiP-f4-Vob"/>
                     <connections>
                         <outlet property="factText" destination="MUD-Ew-q1O" id="VDy-zj-qax"/>
@@ -249,6 +204,7 @@ App'en er ikke udviklet af Aarhus Kommunes Biblioteker, men bruger webservicen D
         <scene sceneID="B5V-DS-Ij1">
             <objects>
                 <navigationController definesPresentationContext="YES" id="BbY-YO-vlF" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" tag="666" title="Favoritter" image="star-white.png" id="xyo-K2-wTx"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" id="WPF-3Z-9hJ">
                         <autoresizingMask key="autoresizingMask"/>
@@ -266,43 +222,32 @@ App'en er ikke udviklet af Aarhus Kommunes Biblioteker, men bruger webservicen D
             <objects>
                 <viewController id="Gm0-5t-OPn" customClass="FaktaViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DDs-e6-HLm">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="dmk-ll-pJa">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="146" id="lQp-lI-TUo"/>
-                                    <constraint firstAttribute="height" constant="49" id="sRG-8G-q5O"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="dmk-ll-pJa">
+                                <rect key="frame" x="20" y="20" width="146" height="49"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="quote.png" translatesAutoresizingMaskIntoConstraints="NO" id="kjc-AN-yoV">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="45" id="4fF-sa-cCX"/>
-                                    <constraint firstAttribute="height" constant="42" type="user" id="Of9-Xz-OTP"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="quote.png" translatesAutoresizingMaskIntoConstraints="NO" id="kjc-AN-yoV">
+                                <rect key="frame" x="20" y="74" width="45" height="42"/>
                             </imageView>
-                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Content text" translatesAutoresizingMaskIntoConstraints="NO" id="A9h-Oq-cVD">
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Content text" translatesAutoresizingMaskIntoConstraints="NO" id="A9h-Oq-cVD">
+                                <rect key="frame" x="20" y="141" width="286" height="263"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="0.33000000000000002" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                 </accessibility>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="243" type="user" id="1CY-EW-Lzt"/>
-                                    <constraint firstAttribute="width" constant="286" id="Bja-Wt-m8N"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="228" translatesAutoresizingMaskIntoConstraints="NO" id="mJq-Ng-Gjw">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="76" type="user" id="59u-cD-0yB"/>
-                                    <constraint firstAttribute="width" constant="228" id="fHQ-Uu-Siq"/>
-                                </constraints>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="228" translatesAutoresizingMaskIntoConstraints="NO" id="mJq-Ng-Gjw">
+                                <rect key="frame" x="72" y="77" width="228" height="56"/>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eU9-g1-mxY">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eU9-g1-mxY">
+                                <rect key="frame" x="246" y="459" width="60" height="41"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Del fakta">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -315,14 +260,11 @@ App'en er ikke udviklet af Aarhus Kommunes Biblioteker, men bruger webservicen D
                                     <action selector="showShareMenu:" destination="Gm0-5t-OPn" eventType="touchUpInside" id="Q6Z-I3-7VG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPc-Iw-U6d">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPc-Iw-U6d">
+                                <rect key="frame" x="262" y="20" width="44" height="44"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="55" id="Ksc-Ao-viK"/>
-                                    <constraint firstAttribute="height" constant="55" id="SjP-af-APa"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="02-redo@2x.png">
+                                <state key="normal" backgroundImage="02-redo.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -333,27 +275,20 @@ App'en er ikke udviklet af Aarhus Kommunes Biblioteker, men bruger webservicen D
                                     <action selector="fetchNewFact:" destination="Gm0-5t-OPn" eventType="touchUpInside" id="eXf-Ag-1Ab"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Indsendt af:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqd-nC-9oa">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="3UE-Qu-fvf"/>
-                                    <constraint firstAttribute="width" constant="102" id="mpU-IN-U7G"/>
-                                </constraints>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Indsendt af:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqd-nC-9oa">
+                                <rect key="frame" x="20" y="421" width="102" height="21"/>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uH-0n-yJn">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="183" id="BDq-QL-Upb"/>
-                                </constraints>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uH-0n-yJn">
+                                <rect key="frame" x="107" y="421" width="159" height="21"/>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKM-2o-qYK">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="92" id="i9V-Yf-Mlj"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKM-2o-qYK">
+                                <rect key="frame" x="15" y="443" width="67" height="41"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Læs mere">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -368,30 +303,8 @@ App'en er ikke udviklet af Aarhus Kommunes Biblioteker, men bruger webservicen D
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="dmk-ll-pJa" firstAttribute="leading" secondItem="DDs-e6-HLm" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="4xz-Zk-zF2"/>
-                            <constraint firstItem="A9h-Oq-cVD" firstAttribute="top" secondItem="mJq-Ng-Gjw" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="5Mk-er-YO1"/>
-                            <constraint firstAttribute="bottom" secondItem="SKM-2o-qYK" secondAttribute="bottom" constant="20" symbolic="YES" type="user" id="6FW-BW-raj"/>
-                            <constraint firstItem="kjc-AN-yoV" firstAttribute="top" secondItem="DDs-e6-HLm" secondAttribute="top" constant="74" type="user" id="ABh-xx-ePQ"/>
-                            <constraint firstItem="SKM-2o-qYK" firstAttribute="baseline" secondItem="eU9-g1-mxY" secondAttribute="baseline" type="user" id="FbB-hY-LoH"/>
-                            <constraint firstAttribute="trailing" secondItem="mJq-Ng-Gjw" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="LTr-uA-CVj"/>
-                            <constraint firstAttribute="bottom" secondItem="eU9-g1-mxY" secondAttribute="bottom" constant="20" symbolic="YES" type="user" id="Osw-en-2Tf"/>
-                            <constraint firstItem="dmk-ll-pJa" firstAttribute="top" secondItem="DDs-e6-HLm" secondAttribute="top" constant="15" id="POr-44-ZLJ"/>
-                            <constraint firstItem="wqd-nC-9oa" firstAttribute="top" secondItem="A9h-Oq-cVD" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="PUn-o3-mwz"/>
-                            <constraint firstItem="0uH-0n-yJn" firstAttribute="top" secondItem="A9h-Oq-cVD" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="QqE-O1-WiP"/>
-                            <constraint firstAttribute="trailing" secondItem="eU9-g1-mxY" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Rla-jw-ioE"/>
-                            <constraint firstItem="mJq-Ng-Gjw" firstAttribute="centerY" secondItem="kjc-AN-yoV" secondAttribute="centerY" type="user" id="TDd-lj-uxO"/>
-                            <constraint firstAttribute="trailing" secondItem="EPc-Iw-U6d" secondAttribute="trailing" constant="26" id="UFS-Il-q4Q"/>
-                            <constraint firstItem="EPc-Iw-U6d" firstAttribute="top" secondItem="DDs-e6-HLm" secondAttribute="top" constant="20" symbolic="YES" type="default" id="UtE-ZE-Xpd"/>
-                            <constraint firstItem="wqd-nC-9oa" firstAttribute="centerX" secondItem="SKM-2o-qYK" secondAttribute="centerX" type="default" id="UzA-rx-2WB"/>
-                            <constraint firstAttribute="bottom" secondItem="A9h-Oq-cVD" secondAttribute="bottom" constant="115" type="user" id="WKu-rp-xSA"/>
-                            <constraint firstItem="A9h-Oq-cVD" firstAttribute="leading" secondItem="DDs-e6-HLm" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="aAs-ul-hC7"/>
-                            <constraint firstAttribute="trailing" secondItem="0uH-0n-yJn" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ks1-BT-bXX"/>
-                            <constraint firstItem="kjc-AN-yoV" firstAttribute="leading" secondItem="DDs-e6-HLm" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="n1Z-bN-ig7"/>
-                            <constraint firstItem="SKM-2o-qYK" firstAttribute="leading" secondItem="DDs-e6-HLm" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="sdy-zn-GN3"/>
-                            <constraint firstItem="0uH-0n-yJn" firstAttribute="baseline" secondItem="wqd-nC-9oa" secondAttribute="baseline" type="default" id="v7Q-ik-QUn"/>
-                        </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="Fakta" image="152-rolodex.png" id="AaP-ee-sHl"/>
                     <navigationItem key="navigationItem" id="p3I-Yh-6rz"/>
                     <connections>
@@ -411,6 +324,7 @@ App'en er ikke udviklet af Aarhus Kommunes Biblioteker, men bruger webservicen D
         <scene sceneID="k1o-Gd-l7P">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="ZTC-HK-Uw1" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="K6Y-Nf-otd">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
@@ -429,7 +343,7 @@ App'en er ikke udviklet af Aarhus Kommunes Biblioteker, men bruger webservicen D
         </scene>
     </scenes>
     <resources>
-        <image name="02-redo@2x.png" width="60" height="51"/>
+        <image name="02-redo.png" width="30" height="26"/>
         <image name="152-rolodex.png" width="26" height="18"/>
         <image name="42-info.png" width="28" height="28"/>
         <image name="logo.png" width="250" height="96"/>
@@ -440,8 +354,6 @@ App'en er ikke udviklet af Aarhus Kommunes Biblioteker, men bruger webservicen D
         <class className="FaktaViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FaktaViewController.h"/>
             <relationships>
-                <relationship kind="action" name="fetchNewFact:"/>
-                <relationship kind="action" name="showShareMenu:"/>
                 <relationship kind="outlet" name="faktaText" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="reloadButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="seeMoreButton" candidateClass="UIButton"/>
@@ -453,7 +365,6 @@ App'en er ikke udviklet af Aarhus Kommunes Biblioteker, men bruger webservicen D
         <class className="FavoriteFactViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FavoriteFactViewController.h"/>
             <relationships>
-                <relationship kind="action" name="showShareMenu:"/>
                 <relationship kind="outlet" name="factText" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="factTitle" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="seeMoreButton" candidateClass="UIButton"/>
@@ -476,7 +387,6 @@ App'en er ikke udviklet af Aarhus Kommunes Biblioteker, men bruger webservicen D
         <class className="WebViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WebViewController.h"/>
             <relationships>
-                <relationship kind="action" name="okPressed:"/>
                 <relationship kind="outlet" name="navBar" candidateClass="UINavigationBar"/>
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
@@ -488,6 +398,6 @@ App'en er ikke udviklet af Aarhus Kommunes Biblioteker, men bruger webservicen D
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="QoX-EU-mdW"/>
+        <segue reference="Z3M-A7-mAo"/>
     </inferredMetricsTieBreakers>
 </document>
